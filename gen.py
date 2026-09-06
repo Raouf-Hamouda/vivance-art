@@ -3,8 +3,9 @@
 import json, html, os, datetime
 ROOT = os.path.dirname(os.path.abspath(__file__)); D = json.load(open(os.path.join(ROOT, "data/site.json"), encoding="utf-8"))
 B = D["brand"]; E = html.escape; STAMP = datetime.datetime.now().strftime("%Y%m%d%H%M"); SITE_URL = "https://raouf-hamouda.github.io/vivance-art/"
-ART = {a["slug"]: a for a in D["artists"]}; WORKS = D["works"]
+ART = {a["slug"]: a for a in D["artists"]}; WORKS = sorted(D["works"], key=lambda w: (w["sold"], D["works"].index(w)))   # available first
 NAV = [("Artists", "artists.html"), ("Works", "works.html"), ("Exhibitions", "exhibitions.html"), ("Framing", "framing.html"), ("About", "about.html"), ("Contact", "contact.html")]
+CART = "https://www.vivanceart.com/cart"
 def price(w): return f"€{int(w['price']):,}".replace(",", " ") if w.get("price") else ""
 def head(title, desc, rel="", image=None):
     img = SITE_URL + (image or D["hero"])
@@ -24,22 +25,32 @@ def nav(current="", rel="", dark=False):
     menu = "".join(f'<a class="item" href="{rel}{h}"{" aria-current=page" if h == current else ""}>{E(t)}<span class="n">{i+1:02d}</span></a>' for i, (t, h) in enumerate(NAV))
     return f'''<nav class="nav{" on-dark" if dark else ""}" data-nav aria-label="Main">
   <a class="brand" href="{rel}index.html">Vivance Art<small>Paris</small></a>
-  <div class="nav-items">{items}<a class="btn btn-ghost shop" href="{B["shop"]}" target="_blank" rel="noopener">Shop</a></div>
+  <div class="nav-items">{items}<a class="btn btn-ghost shop" href="{rel}shop.html"{" aria-current=page" if current == "shop.html" else ""}>Shop</a><a class="link cart" href="{CART}" target="_blank" rel="noopener">Cart ↗</a></div>
   <button class="burger" aria-expanded="false" aria-controls="menu">Menu</button>
 </nav>
-<div class="menu" id="menu">{menu}<div class="foot"><a href="{B["shop"]}" target="_blank" rel="noopener">Online shop ↗</a><a href="mailto:{B["email"]}">{B["email"]}</a><a href="{B["instagram"]}" target="_blank" rel="noopener">Instagram</a><span>{E(B["address"])}</span></div></div>'''
+<div class="menu" id="menu">{menu}<a class="item" href="{rel}shop.html"{" aria-current=page" if current == "shop.html" else ""}>Shop<span class="n">07</span></a><div class="foot"><a href="{CART}" target="_blank" rel="noopener">Cart ↗</a><a href="mailto:{B["email"]}">{B["email"]}</a><a href="{B["instagram"]}" target="_blank" rel="noopener">Instagram</a><span>{E(B["address"])}</span></div></div>'''
 def footer(rel=""):
     return f'''<footer class="footer"><div class="container">
   <div class="cols">
     <div class="col wide"><p class="title">Vivance Art</p><p class="body-l measure-l">{E(D["about"]["lead"])}</p></div>
     <div class="col"><p class="title">Gallery</p>{"".join(f'<a class="link" href="{rel}{h}">{E(t)}</a>' for t, h in NAV)}<a class="link" href="{rel}legal.html">Legal</a></div>
-    <div class="col"><p class="title">Visit</p><p>{E(B["address"])}</p><a class="link" href="mailto:{B["email"]}">{B["email"]}</a><a class="link" href="{B["instagram"]}" target="_blank" rel="noopener">Instagram</a><a class="link" href="{B["shop"]}" target="_blank" rel="noopener">Online shop</a></div>
+    <div class="col"><p class="title">Visit</p><p>{E(B["address"])}</p><a class="link" href="mailto:{B["email"]}">{B["email"]}</a><a class="link" href="{B["instagram"]}" target="_blank" rel="noopener">Instagram</a><a class="link" href="{rel}shop.html">Shop</a></div>
   </div>
   <div class="big" aria-hidden="true">Vivance</div>
   <div class="legal"><span>© {datetime.date.today().year} Vivance Art · Paris</span><span>Discover Latin American Art</span><a class="link" href="#top">Back to top</a></div>
 </div></footer>'''
 def scripts(rel=""):
     return f'<script src="{rel}js/lib/lenis.min.js"></script><script src="{rel}js/lib/gsap.min.js"></script><script src="{rel}js/lib/ScrollTrigger.min.js"></script><script src="{rel}js/site.js?v={STAMP}"></script>\n</body></html>'
+def artist_card(a, rel=""):
+    n = len([w for w in WORKS if w["artist"] == a["slug"]])
+    return f'''<a class="artist-card" href="{rel}artists/{a["slug"]}.html" data-reveal><div class="ph"><img src="{rel}{a["portrait"]}" alt="{E(a["name"])}" loading="lazy"></div><p class="name">{E(a["name"])}</p><p class="place">{E(a["born"])}</p><p class="count">{n} work{"s" if n != 1 else ""}</p></a>'''
+def product_card(w, rel=""):
+    a = ART.get(w["artist"], {}); img = w["images"][0] if w["images"] else ""; year = next((v for k, v in w["details"] if k == "Year"), "")
+    buy = (f'<a class="btn btn-accent" href="{w["shop_url"]}" target="_blank" rel="noopener">Add to cart ↗</a>' if not w["sold"] else '<span class="btn is-sold">Sold</span>') + f'<a class="btn btn-ghost" href="{rel}works/{w["slug"]}.html">Details</a>'
+    return f'''<article class="product" data-artist="{w["artist"]}" data-avail="{"sold" if w["sold"] else "available"}" data-price="{w.get("price") or 0}" data-reveal>
+  <a class="frame" href="{rel}works/{w["slug"]}.html"><img src="{rel}{img}" alt="{E(w["title"])}" loading="lazy">{'<span class="pill sold">Sold</span>' if w["sold"] else ""}</a>
+  <p class="a">{E(a.get("name",""))}</p><p class="t"><i>{E(w["title"])}</i>{", " + E(year) if year else ""}</p><p class="p{" sold" if w["sold"] else ""}">{"Sold" if w["sold"] else price(w)}</p>
+  <div class="buy">{buy}</div></article>'''
 def work_card(w, rel="", show_artist=True):
     a = ART.get(w["artist"], {}); img = w["images"][0] if w["images"] else ""
     year = next((v for k, v in w["details"] if k == "Year"), ""); tech = next((v for k, v in w["details"] if k == "Technique"), "")
@@ -61,7 +72,7 @@ def home():
     for w in avail:
         if w["artist"] not in seen: pick.append(w); seen.add(w["artist"])
         if len(pick) == 6: break
-    rows = "".join(f'''<a class="artist-row" href="artists/{a["slug"]}.html" data-reveal><img src="{a["portrait"]}" alt="" loading="lazy"><div><p class="name">{E(a["name"])}</p><p class="place">{E(a["born"])}</p></div><span class="go">{len([w for w in WORKS if w["artist"]==a["slug"]])} works →</span></a>''' for a in D["artists"])
+    rows = "".join(artist_card(a) for a in D["artists"][:8])
     ev = D["events"][0]
     return f'''{head("Vivance Art · Latin American contemporary art gallery, Paris", "Vivance Art is a Paris gallery dedicated to Latin American contemporary art: exhibitions, artists from Colombia, Venezuela and Argentina, and works available to acquire.")}
 {nav("index.html", dark=True)}
@@ -72,7 +83,7 @@ def home():
     <p class="caption" data-reveal>Contemporary art gallery · Paris 12e</p>
     <h1 class="display-1" data-reveal="0.08">Discover Latin American art.</h1>
     <div class="grid"><p class="body-l span-5" data-reveal="0.16" style="color:rgba(250,247,238,.85)">Painting, sculpture, photography and new media from Colombia, Venezuela and Argentina, shown and sold in Paris.</p>
-    <div class="span-7 row" style="justify-content:flex-end;align-self:end" data-reveal="0.24"><a class="btn btn-accent" href="works.html">See the works</a><a class="btn" style="border-color:rgba(250,247,238,.6);color:var(--paper)" href="artists.html">The artists</a></div></div>
+    <div class="span-7 row" style="justify-content:flex-end;align-self:end" data-reveal="0.24"><a class="btn btn-accent" href="shop.html">Shop the works</a><a class="btn" style="border-color:rgba(250,247,238,.6);color:var(--paper)" href="artists.html">The artists</a></div></div>
   </div></section>
 <section class="section"><div class="container">
   <div class="feature"><div class="img" data-reveal><img src="{ev["image"]}" alt="{E(ev["title"])}" loading="lazy"></div>
@@ -80,7 +91,7 @@ def home():
 </div></section>
 <section class="section" style="padding-top:0"><div class="container">
   <div class="sec-head"><h2 class="h2">Artists</h2><a class="link body-s" href="artists.html">All {len(D["artists"])} artists</a></div>
-  <div class="artist-rows">{rows}</div>
+  <div class="artist-cards">{rows}</div>
 </div></section>
 <section class="section" style="background:var(--paper-2)"><div class="container">
   <div class="sec-head"><h2 class="h2">Available works</h2><a class="link body-s" href="works.html">All {len(WORKS)} works</a></div>
@@ -99,12 +110,12 @@ def home():
 {scripts()}'''
 # ---------------------------------------------------------------- ARTISTS
 def artists():
-    rows = "".join(f'''<a class="artist-row" href="artists/{a["slug"]}.html" data-reveal><img src="{a["portrait"]}" alt="" loading="lazy"><div><p class="name">{E(a["name"])}</p><p class="place">{E(a["born"])}{" · lives in " + E(a["lives"]) if a["lives"] else ""}</p></div><span class="go">{len([w for w in WORKS if w["artist"]==a["slug"]])} works →</span></a>''' for a in D["artists"])
+    rows = "".join(artist_card(a) for a in D["artists"])
     return f'''{head("Artists · Vivance Art", "The artists represented by Vivance Art in Paris.")}
 {nav("artists.html")}
 <main id="top">
 <section class="page-hero"><div class="container stack"><p class="caption" data-reveal>Artists · {len(D["artists"])}</p><h1 class="display-2" data-reveal="0.08">Painters, sculptors, photographers and new-media artists from Latin America.</h1></div></section>
-<section class="section" style="padding-top:0"><div class="container artist-rows">{rows}</div></section>
+<section class="section" style="padding-top:0"><div class="container artist-cards">{rows}</div></section>
 </main>
 {footer()}
 {scripts()}'''
@@ -157,6 +168,21 @@ def work(w):
 </main>
 {footer(rel)}
 {scripts(rel)}'''
+def shop():
+    tabs = '<button class="tab" data-f="artist" data-v="all" aria-selected="true">All artists</button>' + "".join(f'<button class="tab" data-f="artist" data-v="{a["slug"]}" aria-selected="false">{E(a["name"])}</button>' for a in D["artists"] if any(w["artist"] == a["slug"] for w in WORKS))
+    tabs += '<span class="sep"></span><button class="tab" data-f="avail" data-v="all" aria-selected="true">All</button><button class="tab" data-f="avail" data-v="available" aria-selected="false">Available</button>'
+    avail = [w for w in WORKS if not w["sold"]]
+    return f'''{head("Shop · Vivance Art", "Acquire original works by Latin American artists: painting, sculpture, photography. Secure checkout.")}
+{nav("shop.html")}
+<main id="top">
+<section class="page-hero"><div class="container stack"><p class="caption" data-reveal>Shop · {len(avail)} works available</p><h1 class="display-2" data-reveal="0.08">Original works, acquired in a few clicks.</h1><p class="muted measure-l" data-reveal="0.12">Add to cart opens the work in our secure online checkout. Unique pieces are delivered personally; framing and mounting on request. Questions before buying: <a class="ul" href="contact.html">write to us</a>.</p></div></section>
+<section class="section" style="padding-top:0"><div class="container">
+  <div class="shop-bar"><div class="filters">{tabs}</div><a class="btn btn-ink" href="{CART}" target="_blank" rel="noopener">View cart ↗</a></div>
+  <div class="shop-grid" id="works">{"".join(product_card(w) for w in WORKS)}</div><p class="muted body-s" id="empty" hidden style="padding:var(--s-7) 0">No work matches this selection.</p>
+</div></section>
+</main>
+{footer()}
+{scripts()}'''
 # ---------------------------------------------------------------- EXHIBITIONS / ABOUT / FRAMING / CONTACT / LEGAL / 404
 def exhibitions():
     def fmt(d): return datetime.date.fromisoformat(d).strftime("%-d %b %Y")
@@ -222,7 +248,7 @@ def notfound():
 {footer()}
 {scripts()}'''
 os.makedirs(os.path.join(ROOT, "artists"), exist_ok=True); os.makedirs(os.path.join(ROOT, "works"), exist_ok=True)
-PAGES = {"index.html": home(), "artists.html": artists(), "works.html": works(), "exhibitions.html": exhibitions(), "about.html": about(), "framing.html": framing(), "contact.html": contact(), "legal.html": legal(), "404.html": notfound()}
+PAGES = {"index.html": home(), "artists.html": artists(), "works.html": works(), "shop.html": shop(), "exhibitions.html": exhibitions(), "about.html": about(), "framing.html": framing(), "contact.html": contact(), "legal.html": legal(), "404.html": notfound()}
 for a in D["artists"]: PAGES[f"artists/{a['slug']}.html"] = artist(a)
 for w in WORKS: PAGES[f"works/{w['slug']}.html"] = work(w)
 for fn, out in PAGES.items(): open(os.path.join(ROOT, fn), "w", encoding="utf-8").write(out)

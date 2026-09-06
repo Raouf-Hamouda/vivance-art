@@ -16,7 +16,7 @@
   const burger = document.querySelector('.burger'), menu = document.querySelector('.menu');
   if (burger && menu) burger.addEventListener('click', () => { const open = menu.classList.toggle('open'); burger.textContent = open ? 'Close' : 'Menu'; burger.setAttribute('aria-expanded', open); root.classList.toggle('menu-open', open); nav.classList.toggle('scrolled', open || nav.classList.contains('scrolled')); if (lenis) open ? lenis.stop() : lenis.start(); });
   /* work filters */
-  const filters = document.querySelector('.filters'), works = [...document.querySelectorAll('#works .work')];
+  const filters = document.querySelector('.filters'), works = [...document.querySelectorAll('#works .work, #works .product')];
   if (filters && works.length) { const state = { artist: 'all', avail: 'all' };
     const apply = () => { let n = 0; works.forEach(w => { const ok = (state.artist === 'all' || w.dataset.artist === state.artist) && (state.avail === 'all' || w.dataset.avail === state.avail); w.classList.toggle('hidden', !ok); if (ok) n++; }); const e = document.getElementById('empty'); if (e) e.hidden = n > 0; if (window.ScrollTrigger) ScrollTrigger.refresh(); };
     filters.addEventListener('click', e => { const b = e.target.closest('.tab'); if (!b) return; state[b.dataset.f] = b.dataset.v; filters.querySelectorAll(`.tab[data-f="${b.dataset.f}"]`).forEach(t => t.setAttribute('aria-selected', t === b)); apply(); });
