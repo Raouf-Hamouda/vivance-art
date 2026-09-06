@@ -1,0 +1,1748 @@
+{
+ "brand": {
+  "name": "Vivance Art",
+  "tagline": "Discover Latin American Art",
+  "city": "Paris",
+  "address": "10 avenue de Corbera, 75012 Paris",
+  "email": "vivance17paris@gmail.com",
+  "instagram": "https://www.instagram.com/vivancearts/",
+  "shop": "https://www.vivanceart.com/shop"
+ },
+ "about": {
+  "lead": "Vivance Art is a Paris gallery dedicated to the exhibition and dissemination of Latin American art.",
+  "body": [
+   "Our mission is to bring the rich cultural heritage and creative diversity of Latin American artists to international stages, and to open a vibrant dialogue between their expressions and a global audience. Specialising in contemporary art, Vivance champions emerging and established artists who challenge the boundaries of artistic language and convention.",
+   "Beyond our curated exhibitions, we offer personal, expert advice to collectors, institutions and art enthusiasts, and we facilitate the acquisition of unique, significant works that resonate with their values. Our commitment is to connect talented artists with new audiences while strengthening the presence of Latin American art in Europe."
+  ],
+  "image": "media/site/about.jpg"
+ },
+ "hero": "media/works/vendeur-de-bouees-avec-bermuda-imprimee-1.jpg",
+ "logo_black": "media/site/logo-black.png",
+ "artists": [
+  {
+   "slug": "rosario-heins",
+   "name": "Rosario Heins",
+   "born": "Barranquilla, Colombia",
+   "lives": "La Grande-Motte, France",
+   "bio": [
+    "Rosario Heins is a Colombian visual artist whose painting is deeply rooted in the light, color, music, and everyday life of the Caribbean. She studied Plastic Arts and Painting at the School of Fine Arts in Barranquilla from 1975 to 1979 and later pursued studies in sculpture and printmaking at the School of Fine Arts in Cartagena. Her training in printmaking included working with Colombian artist Humberto Giangrandi.",
+    "Drawing and painting are central to Heins’s practice. Working on canvas and paper with acrylic paint, charcoal, and colored pencils, she constructs luminous scenes inspired by the beaches of the Colombian Caribbean and the Mediterranean coast. Her compositions are distinguished by saturated colors, detailed observation, rhythmic arrangements, and an intense treatment of tropical and Mediterranean light.",
+    "Street vendors, palenqueras, bathers, families, inflatable toys, fruit, sunglasses, and other beach merchandise populate her visual universe. Beneath the apparent joy and spontaneity of these scenes lies a sensitive social perspective. Heins pays tribute to informal workers and to the resourcefulness known in Colombia as el rebusque, portraying the dignity, generosity, and resilience of people who make their living along the coast.",
+    "Memory, migration, and cultural identity are also fundamental to her work. Based in southern France, in La Grande-Motte, Heins maintains a close connection with her native Colombia, returning regularly to the Caribbean as a source of artistic and emotional renewal. Her paintings bring these territories into dialogue, transforming personal memories into images that explore belonging and the coexistence of leisure and labor within the same public space.",
+    "Her solo exhibitions include presentations at Galería de la Aduana in Barranquilla, the Museum of Modern Art of Cartagena, the Palacio de la Proclamación in Cartagena, Espace Louis Feuillade in Lunel, and cultural venues in Montpellier, La Grande-Motte, Biarritz, Paris, Havana, Santiago de Chile, New York, Geneva, and other cities. In 2017, she was invited to create a monumental mural measuring approximately 38 meters for the M.U.R de Pérols in France.",
+    "Recent exhibitions include Oficio: Cartagena at the Palacio de la Proclamación in 2023–2024 and Éclat de Soleil at Galerie d’Art Prévert in Mauguio in 2026. These presentations continued her exploration of Caribbean and Mediterranean beach life, balancing an atmosphere of freedom, color, and happiness with a lucid awareness of the social and economic realities experienced by informal workers."
+   ],
+   "website": "https://www.rosarioheins.fr/",
+   "instagram": "https://www.instagram.com/rosarioheins/?hl=en",
+   "portrait": "media/artists/rosario-heins.jpg"
+  },
+  {
+   "slug": "patricia-quevedo",
+   "name": "Patricia Quevedo",
+   "born": "Barcelona, Venezuela",
+   "lives": "Barranquilla, Colombia",
+   "bio": [
+    "Patricia Quevedo is a Colombian-Venezuelan visual artist whose practice spans painting, sculpture, and three-dimensional constructions. Developed over more than three decades, her work explores the relationships between geometry, color, rhythm, movement, and visual perception.",
+    "Quevedo’s visual language was shaped by her early encounters with Venezuelan kinetic art and her sustained interest in the work of Jesús Rafael Soto and Carlos Cruz-Diez. In her paintings and sculptural compositions, circles, squares, rectangles, triangles, lines, and grids are repeated, juxtaposed, and layered to create dynamic optical relationships. Contrasts between warm and cool colors make forms appear to advance, recede, expand, and contract.",
+    "Play is a central theme throughout her practice. Drawing on childhood memories, traditional games, puzzles, sports, and video games, Quevedo explores the challenges, emotions, strategies, and learning processes associated with play. Her compositions invite viewers to participate in the act of observation, deciphering internal systems and visual codes that are not immediately apparent.",
+    "Her recent work expands her geometric investigations into three-dimensional structures and new combinations of materials, including plexiglass, canvas, wood, acrylic, and direct acrylic printing. Through serial repetition and carefully balanced relationships between color, form, material, and space, she creates works that challenge perception while reflecting on memory, personal history, and the passage of time.",
+    "Quevedo has presented solo exhibitions in Colombia, Venezuela, and the United States. Her most recent solo exhibition, Pasadizos de la Historia, was presented at Galería Otros 360° in Bogotá in 2025. Other solo exhibitions include 3D at Galería de la Aduana in Barranquilla; El color toma forma at the Alliance Française in Barranquilla; Teoría, Práctica, Irrealidad at Galería Blasini in Caracas; and The Color of Black and White at Colombian Center Gallery in New York.",
+    "Her work has also been included in exhibitions and art fairs in Colombia, Venezuela, Panama, El Salvador, France, and the United States, including Circuito ARTBO, Art Miami, The Affordable Art Fair in New York, Saundarya at Galería Mmaison in Bogotá, Memorias, Reflexiones y Juegos at Galería 1-2-3 in San Salvador, and Art Capital at the Grand Palais in Paris."
+   ],
+   "website": "https://patricia-quevedo.com/",
+   "instagram": "https://www.instagram.com/patriciaquevedo.artista/",
+   "portrait": "media/artists/patricia-quevedo.jpg"
+  },
+  {
+   "slug": "rafael-baron",
+   "name": "Rafael Barón",
+   "born": "Sahagún, Córdoba, Colombia",
+   "lives": "Barranquilla, Colombia",
+   "bio": [
+    "Rafael Barón is a Colombian visual artist whose multidisciplinary practice brings together painting, photography, drawing, and mixed media. He studied Fine Arts at the Universidad del Atlántico in Barranquilla and Anthropology at the Universidad de Antioquia in Medellín, where he also pursued studies in photography, drawing, and pictorial techniques.",
+    "His work is rooted in figurative imagery and the graphic arts, constructing subjective spaces in which reality and fantasy continuously intersect. Through a deeply personal visual language, Barón explores memory, identity, nostalgia, and the transformation of lived experience into symbolic images.",
+    "Objects play a central role in his compositions. Toys, jewelry, animals, vegetation, clothing, places, and fragments of everyday life become carriers of memory and extensions of the lived body. His paintings often move between the recognizable and the dreamlike, inviting the viewer into intimate environments where personal recollection, imagination, and cultural references coexist.",
+    "This dialogue between the real and the fantastic gives his work a distinctive historical and melancholic dimension. Rather than treating technique as an end in itself, Barón uses materials, color, figures, and symbols to construct visual narratives that are intimate, honest, and deeply connected to memory.",
+    "His solo exhibitions include 1000 + 1 at Galería Otros 360 in Bogotá (2022), Bestiario Tropical at Casa Fundación Gases del Caribe in Barranquilla (2017), Plantación adentro at the Pinacoteca de la Aduana in Barranquilla (2016), and 0–142 metros sobre el nivel del mar at Centro Cultural Comfamiliar in Barranquilla (2014). He has also participated in numerous group exhibitions in Colombia and internationally."
+   ],
+   "website": "",
+   "instagram": "https://www.instagram.com/rafibaronherazo/",
+   "portrait": "media/artists/rafael-baron.jpg"
+  },
+  {
+   "slug": "alex-de-la-torre",
+   "name": "Alex de la Torre",
+   "born": "Barranquilla, Colombia",
+   "lives": "Barranquilla, Colombia",
+   "bio": [
+    "Alex de la Torre Carbonell is a Colombian visual artist whose multidisciplinary practice encompasses figurative painting, sculpture, assemblage, and installation. He studied Plastic Arts at the Universidad del Atlántico in Barranquilla. His early training included working with artist Manuel Bustos and later serving as an assistant to Haime Álvarez Correa. His installation Dinero, presented at the Alliance Française in Barranquilla, received academic distinction as his laureate graduation project.",
+    "De la Torre’s practice moves between realism and conceptual construction. Through layered compositions, symbolic imagery, found and industrial objects, and carefully orchestrated visual narratives, he examines memory, social and political tensions, consumer culture, and the relationship between personal experience and collective history. Figurative painting remains central to his work, while sculpture and installation allow his images to extend into physical space.",
+    "In recent bodies of work, including Extinción and Sierra Nevada, the artist has focused on ecological fragility and the growing effects of the climate crisis. Fire, smoke, firefighters, hoses, and extinguishers appear as recurring visual signs, transforming scenes of environmental emergency into reflections on responsibility, vulnerability, and the possibility of collective action.",
+    "His solo exhibitions include Dinero at the Alliance Française in Barranquilla; Paralelos at Galería Institucional Comfamiliar; Naturaleza at Galería de la Aduana; and Testigos: Volumen II at the Consular Gallery of Colombia in New York. The latter evoked the atmosphere, cultural memory, and distinctive visual character of Barranquilla and the Colombian Caribbean.",
+    "De la Torre has participated in exhibitions and art initiatives in Colombia, the United States, Spain, and Venezuela. He received first place in the Painting–Established Artist category of the Salón Distrital de Artes in both 2017 and 2019, was preselected for Figurativas 2017 at the European Museum of Modern Art in Barcelona, and received the Young Artists Chevrolet Prize in 2008. His recent collaborative projects include Lazos y Trazos, bringing contemporary art into dialogue with the textile traditions of artisans from Chorrera, Atlántico, and Café Arte Musa, a collective tribute to Colombian writer Álvaro Cepeda Samudio."
+   ],
+   "website": "https://delatorrealex.com/",
+   "instagram": "https://www.instagram.com/delatorre_arte/",
+   "portrait": "media/artists/alex-de-la-torre.jpg"
+  },
+  {
+   "slug": "jair-galindo",
+   "name": "Jair Galindo",
+   "born": "Barranquilla, Colombia",
+   "lives": "Barranquilla, Colombia",
+   "bio": [
+    "Jair Galindo is a Colombian visual artist and educator whose practice is centered on drawing. He studied at the Faculty of Fine Arts of the Universidad del Atlántico in Barranquilla. His graduation project was selected for the XIII Regional Salon of Caribbean Artists and received the university’s highest academic distinction.",
+    "Galindo has developed a distinctive drawing process in which the conventional pencil is replaced by a precision knife or scalpel. By cutting and removing material from the surface, he allows light, shadow, and negative space to participate in the construction of the image. Drawing thus becomes both an act of inscription and erasure: each incision reveals forms that appear to emerge directly from light.",
+    "His high-contrast compositions explore the relationship between presence and absence, visibility and concealment. A close observer of his surroundings, Galindo draws on memory, human experience, and everyday environments to suggest narratives that are not immediately visible. Rather than imposing a single interpretation, he creates contemplative images that invite viewers to complete the work through their own memories and associations.",
+    "Light is both a physical and conceptual material in his practice. It passes through or interacts with the incised surface, making absence visible and transforming emptiness into form. This process challenges conventional definitions of drawing while preserving its fundamental relationship with line, gesture, observation, and the construction of meaning.",
+    "Alongside his studio practice, Galindo has contributed to arts education in Barranquilla as a teacher at the Escuela Distrital de Artes y Tradiciones Populares. His work as an educator forms part of a broader commitment to drawing as a foundational artistic language and to the development of visual arts in the Colombian Caribbean.",
+    "In 2019, Galindo received the award in the Drawing – Established Artist category at the IV Salón Distrital de Artistas Plásticos y Visuales de Barranquilla. He was also selected for Imagen Regional 9, the national circulation and curatorial program organized by the Banco de la República.",
+    "His work has been presented in exhibitions and art platforms including Feria del Millón Caribe in Barranquilla; El dibujo es mentira II – La mano que miente at the Alliance Française in Barranquilla; Vacasquilla at the Gran Malecón; and La virtud de la luz at Elsa Piñeres Galería. In 2026, he participated in the third edition of Café Arte Musa, a collective exhibition presented by Musa Galería de Arte in Barranquilla."
+   ],
+   "website": "",
+   "instagram": "https://www.instagram.com/jairgalindoart/",
+   "portrait": "media/artists/jair-galindo.jpg"
+  },
+  {
+   "slug": "monica-urquijo",
+   "name": "Mónica Urquijo",
+   "born": "Barranquilla, Colombia",
+   "lives": "Barranquilla, Colombia",
+   "bio": [
+    "Mónica Urquijo is a Colombian textile designer, artist, and social entrepreneur whose practice brings together contemporary design, traditional craftsmanship, natural fibers, and community-based production. Working from Barranquilla, she creates textile art, furniture, accessories, and objects for interior spaces through an ongoing exploration of material, texture, color, and handwoven form.",
+    "Nature and the cultural traditions of the Colombian Caribbean are central to her creative language. Urquijo works with plant-based fibers and locally sourced materials, including fibers that might otherwise be treated as agricultural waste. Through experimentation with weaving, braiding, knots, bands, and other artisanal processes, she transforms these materials into highly tactile pieces that combine organic irregularity with contemporary design.",
+    "Her work is inseparable from a sustained commitment to social entrepreneurship. Through Textiles Mónica Urquijo and initiatives developed with Asociación Arte-Sana, she has trained and created economic opportunities for hundreds of women artisans in communities across Colombia’s Atlántico region, including women who are heads of household and survivors of displacement and armed conflict. Her collaborative model preserves and renews textile knowledge while strengthening the artisans’ productive independence and access to national and international markets.",
+    "Urquijo’s designs have achieved international recognition and have been produced for brands including Ralph Lauren. Her work has also been presented through international design platforms and fairs, including Maison & Objet in Paris, where Colombian craftsmanship, sustainable materials, and contemporary design were introduced to a global audience.",
+    "In 2006, Urquijo was recognized as Social Entrepreneur of the Year by Dinero magazine and the Schwab Foundation. Her practice continues to demonstrate how design can connect material innovation, cultural identity, environmental awareness, and social transformation."
+   ],
+   "website": "",
+   "instagram": "https://www.instagram.com/designsmonicaurquijo/?hl=en",
+   "portrait": "media/artists/monica-urquijo.jpg"
+  },
+  {
+   "slug": "julian-matarazzo",
+   "name": "Julián Matarazzo",
+   "born": "Barranquilla, Colombia",
+   "lives": "Barranquilla, Colombia",
+   "bio": [
+    "Julián García, known artistically as Julián Matarazzo, is a Colombian visual artist whose practice spans painting and sculpture. He began his artistic studies at the Escuela Distrital de Artes in Barranquilla and has continued developing his practice through independent study and further training, including coursework at New York Studio School.",
+    "Matarazzo’s work explores memory, identity, human relationships, and the emotional associations embedded in everyday objects. His compositions often feature elongated figures, childhood scenes, musical references, and familiar materials that function as points of connection between personal experience and collective memory.",
+    "Music occupied an important place in his early creative life and continues to inform the rhythm and emotional structure of his work. Family scenes, moments of play, and memories of growing up in Barranquilla are transformed into stylized visual narratives. Rather than reproducing the past literally, Matarazzo uses these references to reflect on the invisible bonds, exchanges, and forms of interdependence that shape human experience.",
+    "Working across canvas and sculptural materials such as marble and construction blocks, Matarazzo combines traditional processes with playful contemporary elements. The contrast between the permanence of stone, the intimacy of painting, and the modular quality of LEGO-like forms allows him to explore the relationship between fragility and structure, nostalgia and transformation, individuality and connection.",
+    "His recent series Pantone Caribe expands this investigation through the relationship between color, taste, memory, and territory. Inspired by fruits, ingredients, dishes, and sensory experiences associated with the Colombian Caribbean, the series transforms color into a language of cultural identity. Shades associated with guineo, patilla, mandarina, ciruela, guandú, and other flavors become markers of lived experience and evoke the emotional geography of the region.",
+    "Presented at Galería Barceló in Barranquilla in 2025, Pantone Caribe included paintings and sculptures and reflected on the Caribbean as a broad and interconnected cultural space. Matarazzo has also participated in solo and group exhibitions, art fairs, and auctions in Barranquilla and Bogotá. In 2025, his work was included in a collective presentation of Colombian artists in Paris."
+   ],
+   "website": "",
+   "instagram": "https://www.instagram.com/julianchiss/",
+   "portrait": "media/artists/julian-matarazzo.jpg"
+  },
+  {
+   "slug": "federico-lobo",
+   "name": "Federico Lobo",
+   "born": "Barranquilla, Colombia",
+   "lives": "Barranquilla, Colombia",
+   "bio": [
+    "Federico Lobo Hernández is a Colombian visual artist working primarily across painting, drawing, and printmaking. He studied Plastic Arts at the Universidad del Atlántico in Barranquilla, developing a multidisciplinary practice centered on memory, emotion, color, and the visual transformation of everyday experience.",
+    "Childhood and collective memory occupy a central place in Lobo’s work. His images draw on games, objects, music, urban surroundings, and familiar moments that persist as emotional traces. Through these elements, he creates visual narratives in which personal recollection intersects with experiences shared across generations and communities.",
+    "His creative process is intuitive and fluid. Works often begin with stains, gestures, and playful interactions between light and color. As the composition develops, these apparently abstract elements gradually reveal recognizable or realistic forms. This movement between spontaneity and representation allows instinct, memory, and observation to coexist within the same image.",
+    "Music also plays an important role in his practice, influencing the rhythm, atmosphere, and emotional structure of his compositions. Color functions not only as a descriptive element but as a carrier of sensation, while light helps transform ordinary subjects into images charged with memory. Rather than presenting a fixed narrative, Lobo creates open visual fields that encourage viewers to connect the work with their own recollections and emotional experiences.",
+    "His projects include Mezclas precolombinas, selected for the I Salón de Artes Plásticas y Visuales de Barranquilla in 2015; Arroyo peligroso, presented at the Bienal de Artes Visuales del Atlántico in 2017; and the recent pictorial project Dulces Juegos, developed in 2024. These works reflect his continuing interest in childhood, play, cultural memory, and the everyday landscapes of the Colombian Caribbean.",
+    "Lobo has presented solo exhibitions at La Interface in Barranquilla in 2021, the Alliance Française in Barranquilla in 2022, and Galería La Aduana in 2023. His work has also been included in group exhibitions and visual arts salons in Barranquilla, Bogotá, Santa Marta, Cajicá, and Medellín, including the XI International Art Biennial of Suba in Bogotá in 2019."
+   ],
+   "website": "",
+   "instagram": "https://www.instagram.com/fedexartista/",
+   "portrait": "media/artists/federico-lobo.jpg"
+  },
+  {
+   "slug": "gonzalo-jimenez",
+   "name": "Gonzalo Jiménez",
+   "born": "Barranquilla, Colombia",
+   "lives": "Barranquilla, Colombia",
+   "bio": [
+    "Gonzalo Jiménez Orozco is a Colombian photographer whose work explores territory, memory, cultural identity, and everyday life in the Colombian Caribbean. Although his first vocation was landscape design, photography gradually became his principal artistic language. His background in architecture, interior design, and landscape design continues to shape his understanding of space, proportion, light, and the relationship between people and their surroundings.",
+    "Jiménez approaches photography with a distinctly pictorial sensibility. He considers each photograph as a constructed image in which light, geometry, atmosphere, and fleeting details come together to reveal poetic dimensions of ordinary experience. His preference for agile photographic equipment allows him to respond intuitively to unexpected encounters and to record moments that might otherwise pass unnoticed.",
+    "Portraiture and landscape converge in his practice. Rather than treating the natural environment as a passive backdrop, Jiménez presents territory as a living presence shaped by history, human experience, and cultural memory. His first vocation as a landscape designer remains visible in his attention to vegetation, topography, scale, spatial rhythms, and the interaction between built and natural environments.",
+    "His photographic project Ancestral La Guajira: A Living Culture Between the Desert and the Sea focuses on the Wayuu people and the distinctive territory of La Guajira. Through portraits and landscapes, the series explores the relationship between ancestral memory, community, and an environment defined by the desert, wind, and sea. The photographs bear witness to a living culture whose knowledge, identity, and traditions have been transmitted across generations.",
+    "The project presents La Guajira not as an empty or inhospitable landscape, but as a territory rich in life, memory, and cultural meaning. Jiménez’s images invite viewers to encounter the dignity and resilience of the people who inhabit it while recognizing the profound connection between Wayuu culture and the natural world.",
+    "His exhibitions include La fotografía de Gonzalo Jiménez at Combarranquilla in 2011; La palabra, identidad, patrimonio y globalización, presented during the Festival de la Cultura Wayuu in Uribia; El otro lado de la luz at the Centro Cultural Colombo Americano in Barranquilla and the Museo Bolivariano in Santa Marta; Rostros y máscaras del Carnaval at Combarranquilla; and La mirada pictórica de Gonzalo Jiménez at the Alliance Française in Barranquilla.",
+    "In 2026, Jiménez presents Ancestral La Guajira with Vivance Art as part of the Latin America and Caribbean Weeks — SALC 2026 in France. The exhibition introduces his photographic exploration of the Wayuu people to an international audience, emphasizing the continuity of ancestral memory and the intimate relationship between cultural identity, landscape, and environmental awareness."
+   ],
+   "website": "",
+   "instagram": "https://www.instagram.com/gonzalojimenezorozco/?hl=en",
+   "portrait": "media/artists/gonzalo-jimenez.jpg"
+  },
+  {
+   "slug": "ana-paula-ocampo",
+   "name": "Ana Paula Ocampo",
+   "born": "Reconquista, Santa Fe, Argentina",
+   "lives": "Reconquista, Argentina",
+   "bio": [
+    "Ana Paula Ocampo is an Argentine photographer, visual artist, graphic designer, and educator. She holds a degree in Graphic Design and Visual Communication from the Universidad Nacional del Litoral (UNL).",
+    "Her photographic practice explores memory, identity, and the poetic possibilities of the image, moving between intimate experience and collective narratives. With a sensitive and contemplative approach, Ocampo uses photography as a space where reality and poetry converge, inviting the viewer to reflect on human experience, cultural identity, and the traces left by memory.",
+    "Her work has been presented in individual and group exhibitions in Argentina, Brazil, Colombia, Spain, Greece, France, Germany, and the United Arab Emirates. Among her projects is ORIGEN: voces ancestrales en las aulas, a black-and-white photographic series exploring intercultural education, diversity, and the transmission of ancestral knowledge.",
+    "Ocampo is also co-founder of SAUDADE, the Argentine Network of Photographers for Gestational and Perinatal Grief. Her photographs are held in public and private collections and have appeared on the covers of books and other publications."
+   ],
+   "website": "https://anapaulaocampo.com.ar/",
+   "instagram": "https://www.instagram.com/ana_paula_ocampo/?hl=en",
+   "portrait": "media/artists/ana-paula-ocampo.jpg"
+  },
+  {
+   "slug": "tuty-navarro",
+   "name": "Tuty Navarro",
+   "born": "Sabanalarga, Colombia",
+   "lives": "Barcelona, Spain",
+   "bio": [
+    "Tuty Navarro is a Colombian visual artist and designer working under the name Synesthesia. With more than a decade of experience, her practice brings together audiovisual art, light, sound, music, and technology to create immersive environments where digital experimentation intersects with memory, identity, and ancestral knowledge.",
+    "Her visual language is characterized by psychedelic, symbolic, and geometric imagery. Through VJing, projection, audiovisual performance, and immersive installation, Navarro explores the relationship between image and sound, transforming space into a multisensory experience.",
+    "Among her most significant projects is Orígenes Ancestrales , an immersive audiovisual installation inspired by the ritual and symbolic universe surrounding yagé. Combining projected imagery, sound, geometry, and references to Amazonian landscapes, the work explores ancestry, spirituality, nature, and the transmission of cultural memory through contemporary digital media.",
+    "Presented by Vivance Art in Paris during the Latin America and Caribbean Weeks 2025, Orígenes Ancestrales reflects Navarro's broader artistic approach: using technology not as an end in itself, but as a bridge between contemporary experience and ancestral memory."
+   ],
+   "website": "",
+   "instagram": "https://www.instagram.com/vj_synesthesia/",
+   "portrait": "media/artists/tuty-navarro.jpg"
+  }
+ ],
+ "works": [
+  {
+   "slug": "work-05",
+   "title": "Work 05",
+   "artist": "jair-galindo",
+   "artist_name": "Jair Galindo",
+   "price": 1600.0,
+   "currency": "EUR",
+   "sold": true,
+   "details": [
+    [
+     "Series",
+     "Momentos"
+    ],
+    [
+     "Technique",
+     "Scraping, black Chinese ink applied on 100% cotton paper"
+    ],
+    [
+     "Dimensions",
+     "50cm X 50cm"
+    ]
+   ],
+   "images": [
+    "media/works/work-05-1.jpg",
+    "media/works/work-05-2.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/0bra-06-de-la-serie-momentos"
+  },
+  {
+   "slug": "the-fisherman-3rd",
+   "title": "The fisherman 3rd",
+   "artist": "ana-paula-ocampo",
+   "artist_name": "Ana Paula Ocampo",
+   "price": 220.0,
+   "currency": "EUR",
+   "sold": false,
+   "details": [
+    [
+     "Series",
+     "Fisherman"
+    ],
+    [
+     "Technique",
+     "cyanotype, tea-dyed, textured watercolor paper 350 grams"
+    ],
+    [
+     "Dimensions",
+     "27cm X 27cm"
+    ],
+    [
+     "Year",
+     "2024"
+    ]
+   ],
+   "images": [
+    "media/works/the-fisherman-3rd-1.jpg",
+    "media/works/the-fisherman-3rd-2.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/0lq9kaubkmvz1cr6d9nw9hj53ic1cm"
+  },
+  {
+   "slug": "ripping-1",
+   "title": "Ripping 1",
+   "artist": "ana-paula-ocampo",
+   "artist_name": "Ana Paula Ocampo",
+   "price": 200.0,
+   "currency": "EUR",
+   "sold": true,
+   "details": [
+    [
+     "Series",
+     "Ripping"
+    ],
+    [
+     "Technique",
+     "cyanotype, tea-dyed, textured watercolor paper 350 grams"
+    ],
+    [
+     "Dimensions",
+     "27cm X 19cm"
+    ],
+    [
+     "Year",
+     "2024"
+    ]
+   ],
+   "images": [
+    "media/works/ripping-1-1.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/8bhfcsszjg9qoajgpyxwfj6g797vl7"
+  },
+  {
+   "slug": "fragmento-de-oro",
+   "title": "Fragmento de oro",
+   "artist": "monica-urquijo",
+   "artist_name": "Monica Urquijo",
+   "price": 2000.0,
+   "currency": "EUR",
+   "sold": true,
+   "details": [
+    [
+     "Technique",
+     "Crochet – Gold leaf"
+    ],
+    [
+     "Dimensions",
+     "80cm X 80cm"
+    ],
+    [
+     "Year",
+     "2025"
+    ]
+   ],
+   "images": [
+    "media/works/fragmento-de-oro-1.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/8zg53kg7gyr2b6k6bytzd5e92md3qt"
+  },
+  {
+   "slug": "adoquines-con-diseno",
+   "title": "Adoquines con diseño",
+   "artist": "monica-urquijo",
+   "artist_name": "Monica Urquijo",
+   "price": 2500.0,
+   "currency": "EUR",
+   "sold": false,
+   "details": [
+    [
+     "Technique",
+     "Crochet"
+    ],
+    [
+     "Dimensions",
+     "80cm X 80cm"
+    ],
+    [
+     "Year",
+     "2025"
+    ]
+   ],
+   "images": [
+    "media/works/adoquines-con-diseno-1.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/adoquine-con-diseo-2025"
+  },
+  {
+   "slug": "la-subienda",
+   "title": "La Subienda",
+   "artist": "rafael-baron",
+   "artist_name": "Rafael Baron",
+   "price": 1500.0,
+   "currency": "EUR",
+   "sold": false,
+   "details": [
+    [
+     "Technique",
+     "Acrylic on canvas"
+    ],
+    [
+     "Dimensions",
+     "50cm X 50cm"
+    ],
+    [
+     "Year",
+     "2024"
+    ]
+   ],
+   "images": [
+    "media/works/la-subienda-1.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/air-no-1-c84c8"
+  },
+  {
+   "slug": "el-dorado",
+   "title": "El Dorado",
+   "artist": "rafael-baron",
+   "artist_name": "Rafael Baron",
+   "price": 1500.0,
+   "currency": "EUR",
+   "sold": false,
+   "details": [
+    [
+     "Technique",
+     "Acrylic on canvas"
+    ],
+    [
+     "Dimensions",
+     "50cm X 50cm"
+    ],
+    [
+     "Year",
+     "2024"
+    ]
+   ],
+   "images": [
+    "media/works/el-dorado-1.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/air-no-2-tt3ny"
+  },
+  {
+   "slug": "noche-1001",
+   "title": "Noche 1001",
+   "artist": "rafael-baron",
+   "artist_name": "Rafael Baron",
+   "price": 700.0,
+   "currency": "EUR",
+   "sold": false,
+   "details": [
+    [
+     "Technique",
+     "Collage"
+    ],
+    [
+     "Dimensions",
+     "27cm X 27cm"
+    ],
+    [
+     "Year",
+     "2024"
+    ]
+   ],
+   "images": [
+    "media/works/noche-1001-1.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/air-no-3-framed-e9jzl"
+  },
+  {
+   "slug": "l-orangerie",
+   "title": "L'orangerie",
+   "artist": "rafael-baron",
+   "artist_name": "Rafael Baron",
+   "price": 1500.0,
+   "currency": "EUR",
+   "sold": true,
+   "details": [
+    [
+     "Technique",
+     "Acrylic on canvas"
+    ],
+    [
+     "Dimensions",
+     "50cm X 50cm"
+    ],
+    [
+     "Year",
+     "2024"
+    ]
+   ],
+   "images": [
+    "media/works/l-orangerie-1.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/air-no-4-73gea"
+  },
+  {
+   "slug": "odyssey",
+   "title": "Odyssey",
+   "artist": "rafael-baron",
+   "artist_name": "Rafael Baron",
+   "price": 700.0,
+   "currency": "EUR",
+   "sold": false,
+   "details": [
+    [
+     "Technique",
+     "Collage"
+    ],
+    [
+     "Dimensions",
+     "27cm X 27cm"
+    ],
+    [
+     "Year",
+     "2024"
+    ]
+   ],
+   "images": [
+    "media/works/odyssey-1.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/air-no-5-gbbre"
+  },
+  {
+   "slug": "lamour",
+   "title": "L’amour",
+   "artist": "rafael-baron",
+   "artist_name": "Rafael Baron",
+   "price": 700.0,
+   "currency": "EUR",
+   "sold": false,
+   "details": [
+    [
+     "Technique",
+     "Collage"
+    ],
+    [
+     "Dimensions",
+     "27cm X 27cm"
+    ],
+    [
+     "Year",
+     "2024"
+    ]
+   ],
+   "images": [
+    "media/works/lamour-1.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/air-no-6-ete6t"
+  },
+  {
+   "slug": "the-fisherman-1st",
+   "title": "The fisherman 1st",
+   "artist": "ana-paula-ocampo",
+   "artist_name": "Ana Paula Ocampo",
+   "price": 220.0,
+   "currency": "EUR",
+   "sold": false,
+   "details": [
+    [
+     "Series",
+     "Fisherman"
+    ],
+    [
+     "Technique",
+     "cyanotype, tea-dyed, textured watercolor paper 350 grams"
+    ],
+    [
+     "Dimensions",
+     "27cm X 27cm"
+    ],
+    [
+     "Year",
+     "2024"
+    ]
+   ],
+   "images": [
+    "media/works/the-fisherman-1st-1.jpg",
+    "media/works/the-fisherman-1st-2.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/ana-paula"
+  },
+  {
+   "slug": "azul",
+   "title": "Azul",
+   "artist": "julian-matarazzo",
+   "artist_name": "Julian Matarazzo",
+   "price": 820.0,
+   "currency": "EUR",
+   "sold": false,
+   "details": [
+    [
+     "Technique",
+     "acrylic on canvas"
+    ],
+    [
+     "Dimensions",
+     "50cm X 50cm"
+    ],
+    [
+     "Year",
+     "2025"
+    ]
+   ],
+   "images": [
+    "media/works/azul-1.jpg",
+    "media/works/azul-2.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/azul"
+  },
+  {
+   "slug": "chocoramo",
+   "title": "Chocoramo",
+   "artist": "federico-lobo",
+   "artist_name": "Federico Lobo",
+   "price": 490.0,
+   "currency": "EUR",
+   "sold": false,
+   "details": [
+    [
+     "Series",
+     "Dulces"
+    ],
+    [
+     "Technique",
+     "Acrylic on canvas"
+    ],
+    [
+     "Dimensions",
+     "60cm X 50cm"
+    ]
+   ],
+   "images": [
+    "media/works/chocoramo-1.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/chocoramo"
+  },
+  {
+   "slug": "the-fisherman-2nd",
+   "title": "The fisherman 2nd",
+   "artist": "ana-paula-ocampo",
+   "artist_name": "Ana Paula Ocampo",
+   "price": 220.0,
+   "currency": "EUR",
+   "sold": false,
+   "details": [
+    [
+     "Series",
+     "Fisherman"
+    ],
+    [
+     "Technique",
+     "cyanotype, tea-dyed, textured watercolor paper 350 grams"
+    ],
+    [
+     "Dimensions",
+     "27cm X 27cm"
+    ],
+    [
+     "Year",
+     "2024"
+    ]
+   ],
+   "images": [
+    "media/works/the-fisherman-2nd-1.jpg",
+    "media/works/the-fisherman-2nd-2.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/cqf4h42mhcgko3kjkfsojkntz6bscc"
+  },
+  {
+   "slug": "vs",
+   "title": "VS",
+   "artist": "alex-de-la-torre",
+   "artist_name": "Alex De La Torre",
+   "price": 2950.0,
+   "currency": "EUR",
+   "sold": true,
+   "details": [
+    [
+     "Technique",
+     "Oil on canvas"
+    ],
+    [
+     "Dimensions",
+     "65cm X 46cm"
+    ],
+    [
+     "Year",
+     "2024"
+    ]
+   ],
+   "images": [
+    "media/works/vs-1.jpg",
+    "media/works/vs-2.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/cuadreo"
+  },
+  {
+   "slug": "desierto-cabo-de-la-vela",
+   "title": "Desierto Cabo de la Vela",
+   "artist": "gonzalo-jimenez",
+   "artist_name": "Gonzalo Jimenez",
+   "price": 1200.0,
+   "currency": "EUR",
+   "sold": false,
+   "details": [
+    [
+     "Series",
+     "Guajira Ancestral"
+    ],
+    [
+     "Technique",
+     "Lambda color print on RC Satin paper"
+    ],
+    [
+     "Dimensions",
+     "105,8 cm × 79.4 cm"
+    ],
+    [
+     "Year",
+     "2026"
+    ]
+   ],
+   "images": [
+    "media/works/desierto-cabo-de-la-vela-1.jpg",
+    "media/works/desierto-cabo-de-la-vela-2.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/desierto-cabo-de-la-vela"
+  },
+  {
+   "slug": "dunkin",
+   "title": "Dunkin",
+   "artist": "federico-lobo",
+   "artist_name": "Federico Lobo",
+   "price": 490.0,
+   "currency": "EUR",
+   "sold": false,
+   "details": [
+    [
+     "Series",
+     "Dulces"
+    ],
+    [
+     "Technique",
+     "Acrylic on canvas"
+    ],
+    [
+     "Dimensions",
+     "65cm X 50cm"
+    ]
+   ],
+   "images": [
+    "media/works/dunkin-1.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/dunkin"
+  },
+  {
+   "slug": "filigrana",
+   "title": "Filigrana",
+   "artist": "monica-urquijo",
+   "artist_name": "Monica Urquijo",
+   "price": 2500.0,
+   "currency": "EUR",
+   "sold": false,
+   "details": [
+    [
+     "Technique",
+     "Crochet - Cristales de Swarovski y lurex de plata"
+    ],
+    [
+     "Year",
+     "2025"
+    ]
+   ],
+   "images": [
+    "media/works/filigrana-1.jpg",
+    "media/works/filigrana-2.jpg",
+    "media/works/filigrana-3.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/filigrana-2025"
+  },
+  {
+   "slug": "coral-marino",
+   "title": "Coral marino",
+   "artist": "monica-urquijo",
+   "artist_name": "Monica Urquijo",
+   "price": 2500.0,
+   "currency": "EUR",
+   "sold": false,
+   "details": [
+    [
+     "Technique",
+     "Crochet – Gold Leaf"
+    ],
+    [
+     "Year",
+     "2025"
+    ]
+   ],
+   "images": [
+    "media/works/coral-marino-1.jpg",
+    "media/works/coral-marino-2.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/form-no-1-3k3sy"
+  },
+  {
+   "slug": "coral-marino-2",
+   "title": "Coral marino",
+   "artist": "monica-urquijo",
+   "artist_name": "Monica Urquijo",
+   "price": 2500.0,
+   "currency": "EUR",
+   "sold": false,
+   "details": [
+    [
+     "Technique",
+     "Crochet – Gold Leaf"
+    ],
+    [
+     "Year",
+     "2025"
+    ]
+   ],
+   "images": [
+    "media/works/coral-marino-2-1.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/form-no-2-4gzfw"
+  },
+  {
+   "slug": "precolombino",
+   "title": "Precolombino",
+   "artist": "monica-urquijo",
+   "artist_name": "Monica Urquijo",
+   "price": 2000.0,
+   "currency": "EUR",
+   "sold": false,
+   "details": [
+    [
+     "Technique",
+     "Crochet"
+    ],
+    [
+     "Dimensions",
+     "80cm X 100cm"
+    ],
+    [
+     "Year",
+     "2025"
+    ]
+   ],
+   "images": [
+    "media/works/precolombino-1.jpg",
+    "media/works/precolombino-2.jpg",
+    "media/works/precolombino-3.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/form-no-3-7mtpt"
+  },
+  {
+   "slug": "coral-marino-3",
+   "title": "Coral marino",
+   "artist": "monica-urquijo",
+   "artist_name": "Monica Urquijo",
+   "price": 1700.0,
+   "currency": "EUR",
+   "sold": true,
+   "details": [
+    [
+     "Technique",
+     "Crochet"
+    ],
+    [
+     "Dimensions",
+     "80cm x 80cm"
+    ],
+    [
+     "Year",
+     "2025"
+    ]
+   ],
+   "images": [
+    "media/works/coral-marino-3-1.jpg",
+    "media/works/coral-marino-3-2.jpg",
+    "media/works/coral-marino-3-3.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/form-no-4-ezkzt"
+  },
+  {
+   "slug": "fragmento-plata",
+   "title": "Fragmento plata",
+   "artist": "monica-urquijo",
+   "artist_name": "Monica Urquijo",
+   "price": 2000.0,
+   "currency": "EUR",
+   "sold": true,
+   "details": [
+    [
+     "Technique",
+     "Crochet – Silver Leaf"
+    ],
+    [
+     "Dimensions",
+     "80cm X 80cm"
+    ],
+    [
+     "Year",
+     "2025"
+    ]
+   ],
+   "images": [
+    "media/works/fragmento-plata-1.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/fragmento-plata-2025"
+  },
+  {
+   "slug": "heineken",
+   "title": "Heineken",
+   "artist": "federico-lobo",
+   "artist_name": "Federico Lobo",
+   "price": 980.0,
+   "currency": "EUR",
+   "sold": false,
+   "details": [
+    [
+     "Series",
+     "Tapas"
+    ],
+    [
+     "Technique",
+     "Acrylic on canvas"
+    ],
+    [
+     "Dimensions",
+     "90cm ꝋ"
+    ]
+   ],
+   "images": [
+    "media/works/heineken-1.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/heineken"
+  },
+  {
+   "slug": "infinito",
+   "title": "Infinito",
+   "artist": "monica-urquijo",
+   "artist_name": "Monica Urquijo",
+   "price": 2500.0,
+   "currency": "EUR",
+   "sold": true,
+   "details": [
+    [
+     "Technique",
+     "Crochet – Gold Leaf"
+    ],
+    [
+     "Dimensions",
+     "80cm X 80cm"
+    ],
+    [
+     "Year",
+     "2025"
+    ]
+   ],
+   "images": [
+    "media/works/infinito-1.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/infinito-2025"
+  },
+  {
+   "slug": "ripping-2",
+   "title": "Ripping 2",
+   "artist": "ana-paula-ocampo",
+   "artist_name": "Ana Paula Ocampo",
+   "price": 200.0,
+   "currency": "EUR",
+   "sold": false,
+   "details": [
+    [
+     "Series",
+     "Ripping"
+    ],
+    [
+     "Technique",
+     "cyanotype, tea-dyed, textured watercolor paper 350 grams"
+    ],
+    [
+     "Dimensions",
+     "27cm X 19cm"
+    ],
+    [
+     "Year",
+     "2024"
+    ]
+   ],
+   "images": [
+    "media/works/ripping-2-1.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/irr9ql7b2mz7jw6m2ibgwgzteoftya"
+  },
+  {
+   "slug": "seleccion",
+   "title": "Seleccion",
+   "artist": "patricia-quevedo",
+   "artist_name": "Patricia Quevedo",
+   "price": 1200.0,
+   "currency": "EUR",
+   "sold": true,
+   "details": [
+    [
+     "Series",
+     "Lego"
+    ],
+    [
+     "Technique",
+     "Plexiglass"
+    ],
+    [
+     "Dimensions",
+     "22cm X 22cm X 7.5cm"
+    ],
+    [
+     "Year",
+     "2024"
+    ]
+   ],
+   "images": [
+    "media/works/seleccion-1.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/leaf-no-1-tcnxf"
+  },
+  {
+   "slug": "valor",
+   "title": "Valor",
+   "artist": "patricia-quevedo",
+   "artist_name": "Patricia Quevedo",
+   "price": 1100.0,
+   "currency": "EUR",
+   "sold": false,
+   "details": [
+    [
+     "Series",
+     "Laberintos"
+    ],
+    [
+     "Technique",
+     "Plexiglass"
+    ],
+    [
+     "Dimensions",
+     "26cm X 26cm X 5cm"
+    ],
+    [
+     "Year",
+     "2025"
+    ]
+   ],
+   "images": [
+    "media/works/valor-1.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/leaf-no-1-tcnxf-888jg"
+  },
+  {
+   "slug": "niveles",
+   "title": "Niveles",
+   "artist": "patricia-quevedo",
+   "artist_name": "Patricia Quevedo",
+   "price": 800.0,
+   "currency": "EUR",
+   "sold": false,
+   "details": [
+    [
+     "Series",
+     "Laberintos"
+    ],
+    [
+     "Technique",
+     "Plexiglass"
+    ],
+    [
+     "Dimensions",
+     "21cm X 21cm X 4cm"
+    ],
+    [
+     "Year",
+     "2025"
+    ]
+   ],
+   "images": [
+    "media/works/niveles-1.jpg",
+    "media/works/niveles-2.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/leaf-no-1-tcnxf-888jg-j6slg"
+  },
+  {
+   "slug": "pasion",
+   "title": "Pasion",
+   "artist": "patricia-quevedo",
+   "artist_name": "Patricia Quevedo",
+   "price": 450.0,
+   "currency": "EUR",
+   "sold": true,
+   "details": [
+    [
+     "Series",
+     "Target Shooting"
+    ],
+    [
+     "Technique",
+     "3D Plexiglas"
+    ],
+    [
+     "Dimensions",
+     "10cm X 10cm X 6.5cm"
+    ],
+    [
+     "Year",
+     "2023"
+    ]
+   ],
+   "images": [
+    "media/works/pasion-1.jpg",
+    "media/works/pasion-2.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/leaf-no-3-xzbzj"
+  },
+  {
+   "slug": "defensa",
+   "title": "Defensa",
+   "artist": "patricia-quevedo",
+   "artist_name": "Patricia Quevedo",
+   "price": 600.0,
+   "currency": "EUR",
+   "sold": true,
+   "details": [
+    [
+     "Series",
+     "Ping Pong"
+    ],
+    [
+     "Technique",
+     "Wood and 3D Plexiglas"
+    ],
+    [
+     "Dimensions",
+     "18cm X 10cm X 18cm"
+    ],
+    [
+     "Year",
+     "2023"
+    ]
+   ],
+   "images": [
+    "media/works/defensa-1.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/leaf-no-5-9cffl"
+  },
+  {
+   "slug": "entrelazados",
+   "title": "Entrelazados",
+   "artist": "monica-urquijo",
+   "artist_name": "Monica Urquijo",
+   "price": 7800.0,
+   "currency": "EUR",
+   "sold": false,
+   "details": [
+    [
+     "Technique",
+     "Crochet"
+    ],
+    [
+     "Year",
+     "2025"
+    ]
+   ],
+   "images": [
+    "media/works/entrelazados-1.jpg",
+    "media/works/entrelazados-2.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/luuzl58x2uw90qkhy2n70lhpp9a57x"
+  },
+  {
+   "slug": "nina-guajira",
+   "title": "Niña Guajira",
+   "artist": "gonzalo-jimenez",
+   "artist_name": "Gonzalo Jimenez",
+   "price": 1500.0,
+   "currency": "EUR",
+   "sold": true,
+   "details": [
+    [
+     "Series",
+     "Guajira Ancestral"
+    ],
+    [
+     "Technique",
+     "Lambda color print on RC Satin paper"
+    ],
+    [
+     "Dimensions",
+     "60 cm × 82 cm"
+    ],
+    [
+     "Year",
+     "2026"
+    ]
+   ],
+   "images": [
+    "media/works/nina-guajira-1.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/nia-guajira-sold"
+  },
+  {
+   "slug": "nicotina",
+   "title": "Nicotina",
+   "artist": "alex-de-la-torre",
+   "artist_name": "Alex De La Torre",
+   "price": 2900.0,
+   "currency": "EUR",
+   "sold": false,
+   "details": [
+    [
+     "Technique",
+     "Mixed technique"
+    ],
+    [
+     "Dimensions",
+     "55cm X 37cm"
+    ],
+    [
+     "Year",
+     "2024"
+    ]
+   ],
+   "images": [
+    "media/works/nicotina-1.jpg",
+    "media/works/nicotina-2.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/nicotina"
+  },
+  {
+   "slug": "portrait-de-palenquera-01",
+   "title": "Portrait de Palenquera 01",
+   "artist": "rosario-heins",
+   "artist_name": "Rosario Heins",
+   "price": 1100.0,
+   "currency": "EUR",
+   "sold": false,
+   "details": [
+    [
+     "Technique",
+     "Acrylic and gold leaf on linen"
+    ],
+    [
+     "Dimensions",
+     "25 x 25 cm framed 31x 31 cm"
+    ],
+    [
+     "Year",
+     "2026"
+    ]
+   ],
+   "images": [
+    "media/works/portrait-de-palenquera-01-1.jpg",
+    "media/works/portrait-de-palenquera-01-2.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/palenquera-01"
+  },
+  {
+   "slug": "portrait-de-palenquera-02",
+   "title": "Portrait de Palenquera 02",
+   "artist": "rosario-heins",
+   "artist_name": "Rosario Heins",
+   "price": 1100.0,
+   "currency": "EUR",
+   "sold": false,
+   "details": [
+    [
+     "Technique",
+     "Acrylic and gold leaf on linen"
+    ],
+    [
+     "Dimensions",
+     "25 x 25 cm framed 31x 31 cm"
+    ],
+    [
+     "Year",
+     "2026"
+    ]
+   ],
+   "images": [
+    "media/works/portrait-de-palenquera-02-1.jpg",
+    "media/works/portrait-de-palenquera-02-2.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/palenquera-02"
+  },
+  {
+   "slug": "portrait-de-palenquera-03",
+   "title": "Portrait de Palenquera 03",
+   "artist": "rosario-heins",
+   "artist_name": "Rosario Heins",
+   "price": 1100.0,
+   "currency": "EUR",
+   "sold": false,
+   "details": [
+    [
+     "Technique",
+     "Acrylic and gold leaf on linen"
+    ],
+    [
+     "Dimensions",
+     "25 x 25 cm framed 31x 31 cm"
+    ],
+    [
+     "Year",
+     "2026"
+    ]
+   ],
+   "images": [
+    "media/works/portrait-de-palenquera-03-1.jpg",
+    "media/works/portrait-de-palenquera-03-2.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/palenquera-03"
+  },
+  {
+   "slug": "playa-cabo",
+   "title": "Playa Cabo",
+   "artist": "gonzalo-jimenez",
+   "artist_name": "Gonzalo Jimenez",
+   "price": 1200.0,
+   "currency": "EUR",
+   "sold": false,
+   "details": [
+    [
+     "Series",
+     "Guajira Ancestral"
+    ],
+    [
+     "Technique",
+     "Lambda color print on RC Satin paper"
+    ],
+    [
+     "Dimensions",
+     "105,8 cm × 79.4 cm"
+    ],
+    [
+     "Year",
+     "2026"
+    ]
+   ],
+   "images": [
+    "media/works/playa-cabo-1.jpg",
+    "media/works/playa-cabo-2.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/playa-cabo"
+  },
+  {
+   "slug": "princesa-guajira",
+   "title": "Princesa Guajira",
+   "artist": "gonzalo-jimenez",
+   "artist_name": "Gonzalo Jimenez",
+   "price": 1500.0,
+   "currency": "EUR",
+   "sold": false,
+   "details": [
+    [
+     "Series",
+     "Guajira Ancestral"
+    ],
+    [
+     "Technique",
+     "Lambda color print on RC Satin paper"
+    ],
+    [
+     "Dimensions",
+     "74.2 cm × 103.9 cm"
+    ],
+    [
+     "Year",
+     "2026"
+    ]
+   ],
+   "images": [
+    "media/works/princesa-guajira-1.jpg",
+    "media/works/princesa-guajira-2.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/princesa-guajira"
+  },
+  {
+   "slug": "work-05-2",
+   "title": "Work 05",
+   "artist": "jair-galindo",
+   "artist_name": "Jair Galindo",
+   "price": 1600.0,
+   "currency": "EUR",
+   "sold": true,
+   "details": [
+    [
+     "Series",
+     "Momentos"
+    ],
+    [
+     "Technique",
+     "Scraping, black Chinese ink applied on 100% cotton paper"
+    ],
+    [
+     "Dimensions",
+     "50cm X 50cm"
+    ]
+   ],
+   "images": [
+    "media/works/work-05-2-1.jpg",
+    "media/works/work-05-2-2.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/rabbit-obra-05-de-la-serie-momentos"
+  },
+  {
+   "slug": "la-maga",
+   "title": "La maga",
+   "artist": "rafael-baron",
+   "artist_name": "Rafael Baron",
+   "price": 1500.0,
+   "currency": "EUR",
+   "sold": false,
+   "details": [
+    [
+     "Technique",
+     "Acrylic on canvas"
+    ],
+    [
+     "Dimensions",
+     "50cm X 50cm"
+    ],
+    [
+     "Year",
+     "2025"
+    ]
+   ],
+   "images": [
+    "media/works/la-maga-1.jpg",
+    "media/works/la-maga-2.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/rafa"
+  },
+  {
+   "slug": "rojo",
+   "title": "Rojo",
+   "artist": "julian-matarazzo",
+   "artist_name": "Julian Matarazzo",
+   "price": 820.0,
+   "currency": "EUR",
+   "sold": false,
+   "details": [
+    [
+     "Technique",
+     "acrylic on canvas"
+    ],
+    [
+     "Dimensions",
+     "50cmX50cm"
+    ],
+    [
+     "Year",
+     "2025"
+    ]
+   ],
+   "images": [
+    "media/works/rojo-1.jpg",
+    "media/works/rojo-2.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/rojo"
+  },
+  {
+   "slug": "spiaggia-verde",
+   "title": "Spiaggia Verde",
+   "artist": "julian-matarazzo",
+   "artist_name": "Julian Matarazzo",
+   "price": 1190.0,
+   "currency": "EUR",
+   "sold": false,
+   "details": [
+    [
+     "Technique",
+     "Acrylic on canvas"
+    ],
+    [
+     "Dimensions",
+     "92cm X 45cm"
+    ],
+    [
+     "Year",
+     "2025"
+    ]
+   ],
+   "images": [
+    "media/works/spiaggia-verde-1.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/sand-no-1-blkax"
+  },
+  {
+   "slug": "cada-loco-con-su-globo",
+   "title": "Cada loco con su globo",
+   "artist": "julian-matarazzo",
+   "artist_name": "Julian Matarazzo",
+   "price": 631.0,
+   "currency": "EUR",
+   "sold": false,
+   "details": [
+    [
+     "Technique",
+     "Acrylic on canvas"
+    ],
+    [
+     "Dimensions",
+     "38cm X 35cm"
+    ],
+    [
+     "Year",
+     "2025"
+    ]
+   ],
+   "images": [
+    "media/works/cada-loco-con-su-globo-1.jpg",
+    "media/works/cada-loco-con-su-globo-2.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/sand-no-2-pj96h"
+  },
+  {
+   "slug": "dos-ruedas",
+   "title": "Dos Ruedas",
+   "artist": "julian-matarazzo",
+   "artist_name": "Julian Matarazzo",
+   "price": 490.0,
+   "currency": "EUR",
+   "sold": true,
+   "details": [
+    [
+     "Technique",
+     "Marble, resin and metal wire"
+    ],
+    [
+     "Dimensions",
+     "15cm X 6cm X 10cm"
+    ],
+    [
+     "Year",
+     "2025"
+    ]
+   ],
+   "images": [
+    "media/works/dos-ruedas-1.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/sand-no-3-framed-a522n"
+  },
+  {
+   "slug": "cayeron-los-globos",
+   "title": "Cayeron los globos",
+   "artist": "julian-matarazzo",
+   "artist_name": "Julian Matarazzo",
+   "price": 631.0,
+   "currency": "EUR",
+   "sold": false,
+   "details": [
+    [
+     "Technique",
+     "acrylic on canvas"
+    ],
+    [
+     "Dimensions",
+     "35cmX38cm"
+    ],
+    [
+     "Year",
+     "2025"
+    ]
+   ],
+   "images": [
+    "media/works/cayeron-los-globos-1.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/sand-no-4-jpamt"
+  },
+  {
+   "slug": "toma-te-lo-bueno",
+   "title": "Toma te, lo bueno",
+   "artist": "alex-de-la-torre",
+   "artist_name": "Alex De La Torre",
+   "price": 5800.0,
+   "currency": "EUR",
+   "sold": false,
+   "details": [
+    [
+     "Series",
+     "Sinestesia"
+    ],
+    [
+     "Technique",
+     "Oil on canvas"
+    ],
+    [
+     "Dimensions",
+     "130cm X 60cm"
+    ],
+    [
+     "Year",
+     "2024"
+    ]
+   ],
+   "images": [
+    "media/works/toma-te-lo-bueno-1.jpg",
+    "media/works/toma-te-lo-bueno-2.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/toma-t-lo-bueno-de-la-serie-sinestesia"
+  },
+  {
+   "slug": "viaje-por-el-rio-grande",
+   "title": "Viaje por el Rio Grande",
+   "artist": "rafael-baron",
+   "artist_name": "Rafael Baron",
+   "price": 1500.0,
+   "currency": "EUR",
+   "sold": false,
+   "details": [
+    [
+     "Technique",
+     "Acrylic on canvas"
+    ],
+    [
+     "Dimensions",
+     "50cm X 50cm"
+    ],
+    [
+     "Year",
+     "2024"
+    ]
+   ],
+   "images": [
+    "media/works/viaje-por-el-rio-grande-1.jpg",
+    "media/works/viaje-por-el-rio-grande-2.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/un-viaje-por-el-rio-grande"
+  },
+  {
+   "slug": "vendeur-de-bouees-avec-bermuda-imprimee",
+   "title": "Vendeur de Bouées Avec Bermuda Imprimée",
+   "artist": "rosario-heins",
+   "artist_name": "Rosario Heins",
+   "price": 6000.0,
+   "currency": "EUR",
+   "sold": false,
+   "details": [
+    [
+     "Technique",
+     "Acrylic on linen"
+    ],
+    [
+     "Dimensions",
+     "100 cm x 100 cm"
+    ],
+    [
+     "Year",
+     "2022"
+    ]
+   ],
+   "images": [
+    "media/works/vendeur-de-bouees-avec-bermuda-imprimee-1.jpg",
+    "media/works/vendeur-de-bouees-avec-bermuda-imprimee-2.jpg"
+   ],
+   "shop_url": "https://www.vivanceart.com/shop/p/vendeur-de-boues-avec-bermuda"
+  }
+ ],
+ "events": [
+  {
+   "title": "Retrospective",
+   "kind": "Exhibition",
+   "start": "2025-08-27",
+   "end": "2025-11-11",
+   "time": "Opening Wednesday 27 August, 7 pm",
+   "place": "Vivance Art Gallery, 10 avenue de Corbera, Paris 12e",
+   "text": "A retrospective of the gallery's first season in Paris: the artists, the works and the evenings that built Vivance.",
+   "image": "media/events/event-1.jpg"
+  },
+  {
+   "title": "Origins",
+   "kind": "Exhibition · Latin America and Caribbean Weeks 2025",
+   "start": "2025-05-28",
+   "end": "2025-06-08",
+   "time": "8 pm to midnight",
+   "place": "Vivance Art Gallery, 10 avenue de Corbera, Paris 12e",
+   "text": "As part of the Latin America and Caribbean Weeks 2025 in Paris, Vivance Art presents Tuty Navarro as its central artist. Known as Synesthesia, Navarro blends audiovisual art, music, technology and spirituality. At SALC2025 she introduces Ancestral Origins, an immersive audiovisual installation inspired by Yagé: a journey through the roots, identity and cosmovision of Indigenous peoples, using fractals, videomapping and soundscapes.",
+   "image": "media/events/event-2.jpg"
+  },
+  {
+   "title": "Finissage Vivance",
+   "kind": "Finissage",
+   "start": "2025-05-06",
+   "end": "2025-05-06",
+   "time": "7 pm to 10 pm",
+   "place": "Vivance Art Gallery, Paris",
+   "text": "Closing evening with Mónica Urquijo, Patricia Quevedo, Rafael Barón, Julián García, Alex De la Torre, Jair Galindo, Federico Lobo and Marco Valve.",
+   "image": "media/events/event-3.jpg"
+  },
+  {
+   "title": "Vernissage",
+   "kind": "Opening",
+   "start": "2025-04-12",
+   "end": "2025-04-12",
+   "time": "7 pm",
+   "place": "Vivance Art Gallery, Paris",
+   "text": "Fourth evening of Discover Latin American Art.",
+   "image": "media/events/event-4.jpg"
+  },
+  {
+   "title": "Vernissage",
+   "kind": "Opening",
+   "start": "2025-04-03",
+   "end": "2025-04-03",
+   "time": "7 pm to 10 pm",
+   "place": "Vivance Art Gallery, Paris",
+   "text": "Paris is gearing up for four exclusive evenings. Each night is a unique opportunity to explore exceptional works, connect with artists and immerse yourself in the vibrant atmosphere of art at its finest.",
+   "image": "media/events/event-5.jpg"
+  },
+  {
+   "title": "Vernissage",
+   "kind": "Opening",
+   "start": "2025-03-27",
+   "end": "2025-03-27",
+   "time": "7 pm to 10 pm",
+   "place": "Vivance Art Gallery, Paris",
+   "text": "Second vernissage: new talents in the new space.",
+   "image": "media/events/event-6.jpg"
+  },
+  {
+   "title": "Discover Latin American Art",
+   "kind": "Opening",
+   "start": "2025-03-20",
+   "end": "2025-03-20",
+   "time": "7 pm to 10 pm",
+   "place": "Vivance Art Gallery, Paris",
+   "text": "An exclusive exhibition in the heart of Paris where the vibrant essence of Latin American art comes to life through the works of Rafael Barón, Patricia Quevedo and Sergio Pizón.",
+   "image": "media/events/event-7.jpg"
+  }
+ ],
+ "framing": [
+  {
+   "t": "Wood frame",
+   "d": "A light wood frame that brings delicacy to the room. The wood comes from a family-run, local and sustainable framing workshop known for the durability of its products.",
+   "img": "media/site/framing-1.jpg"
+  },
+  {
+   "t": "UV-protective acrylic frame",
+   "d": "An acrylic frame with UV protection that gives a professional studio finish. Same local, family-run and sustainable workshop.",
+   "img": "media/site/framing-2.jpg"
+  },
+  {
+   "t": "Full-bleed mounting",
+   "d": "The print is framed flush to the edge, without a mat.",
+   "img": "media/site/framing-3.jpg"
+  },
+  {
+   "t": "Mat mounting",
+   "d": "The print sits on a 5 cm white mat with a bevel cut on every edge.",
+   "img": "media/site/framing-4.jpg"
+  },
+  {
+   "t": "Float mounting",
+   "d": "The print is raised so that both the front and the edges remain visible.",
+   "img": "media/site/framing-5.jpg"
+  }
+ ],
+ "legal": {
+  "terms": [
+   "Vivance Art is a travelling gallery that exhibits and promotes Latin American art. The content of this website, including images, descriptions and text, is protected by copyright and is provided for information and reference.",
+   "All works shown are unique and subject to availability. The listing of a work does not guarantee its availability for purchase.",
+   "Works are acquired through our online shop or directly with the gallery. For unique pieces we invite you to contact us so that we can accompany the acquisition personally.",
+   "All content on this site, including text, images and design, is protected by intellectual property rights. Reproduction, distribution or modification without express authorisation is prohibited.",
+   "We reserve the right to modify these terms at any time without prior notice."
+  ],
+  "shipping": [
+   "Vivance Art does not offer standard shipping through the website. Our pieces are unique and require a specialised acquisition process, so delivery is arranged directly with the buyer.",
+   "If you are interested in a work, contact us to coordinate the details of your purchase and a personalised delivery."
+  ]
+ },
+ "hero_credit": {
+  "artist": "Rosario Heins",
+  "title": "Vendeur de Bouées Avec Bermuda Imprimée",
+  "slug": "vendeur-de-bouees-avec-bermuda-imprimee"
+ }
+}
