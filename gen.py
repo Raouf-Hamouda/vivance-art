@@ -25,10 +25,10 @@ def nav(current="", rel="", dark=False):
     menu = "".join(f'<a class="item" href="{rel}{h}"{" aria-current=page" if h == current else ""}>{E(t)}<span class="n">{i+1:02d}</span></a>' for i, (t, h) in enumerate(NAV))
     return f'''<nav class="nav{" on-dark" if dark else ""}" data-nav aria-label="Main">
   <a class="brand" href="{rel}index.html">Vivance Art<small>Paris</small></a>
-  <div class="nav-items">{items}<a class="btn btn-ghost shop" href="{rel}shop.html"{" aria-current=page" if current == "shop.html" else ""}>Shop</a><a class="link cart" href="{CART}" target="_blank" rel="noopener">Cart ↗</a></div>
+  <div class="nav-items">{items}<a class="btn btn-ghost shop" href="{rel}shop.html" data-shop-open{" aria-current=page" if current == "shop.html" else ""}>Shop</a><a class="link cart" href="{CART}" target="_blank" rel="noopener">Cart ↗</a></div>
   <button class="burger" aria-expanded="false" aria-controls="menu">Menu</button>
 </nav>
-<div class="menu" id="menu">{menu}<a class="item" href="{rel}shop.html"{" aria-current=page" if current == "shop.html" else ""}>Shop<span class="n">07</span></a><div class="foot"><a href="{CART}" target="_blank" rel="noopener">Cart ↗</a><a href="mailto:{B["email"]}">{B["email"]}</a><a href="{B["instagram"]}" target="_blank" rel="noopener">Instagram</a><span>{E(B["address"])}</span></div></div>'''
+<div class="menu" id="menu">{menu}<a class="item" href="{rel}shop.html" data-shop-open{" aria-current=page" if current == "shop.html" else ""}>Shop<span class="n">07</span></a><div class="foot"><a href="{CART}" target="_blank" rel="noopener">Cart ↗</a><a href="mailto:{B["email"]}">{B["email"]}</a><a href="{B["instagram"]}" target="_blank" rel="noopener">Instagram</a><span>{E(B["address"])}</span></div></div>'''
 def footer(rel=""):
     return f'''<footer class="footer"><div class="container">
   <div class="cols">
@@ -39,8 +39,20 @@ def footer(rel=""):
   <div class="big" aria-hidden="true">Vivance</div>
   <div class="legal"><span>© {datetime.date.today().year} Vivance Art · Paris</span><span>Discover Latin American Art</span><a class="link" href="#top">Back to top</a></div>
 </div></footer>'''
+def shop_panel(rel=""):
+    items = [{"t": w["title"], "a": ART.get(w["artist"], {}).get("name", ""), "as": w["artist"], "p": price(w), "sold": w["sold"], "img": rel + (w["images"][0] if w["images"] else ""), "url": rel + f"works/{w['slug']}.html", "buy": w.get("checkout_url") or w["shop_url"], "direct": bool(w.get("checkout_url")), "y": next((v for k, v in w["details"] if k == "Year"), "")} for w in WORKS]
+    arts = [{"s": a["slug"], "n": a["name"]} for a in D["artists"] if any(w["artist"] == a["slug"] for w in WORKS)]
+    data = json.dumps({"items": items, "artists": arts, "cart": CART}, ensure_ascii=False).replace("</", "<\\/")
+    return f'''<div class="shop-panel" id="shop" role="dialog" aria-modal="true" aria-label="Shop" hidden>
+  <div class="shop-head"><div><p class="caption">Shop · <span data-shop-count></span> works available</p><p class="h2 serif">Original works, secure checkout.</p></div>
+    <div class="row"><a class="btn btn-ink" href="{CART}" target="_blank" rel="noopener">View cart ↗</a><button class="btn btn-ghost" data-shop-close>Close</button></div></div>
+  <div class="shop-filters filters" data-shop-filters></div>
+  <div class="shop-grid" data-shop-grid></div>
+  <p class="note caption" style="text-transform:none;letter-spacing:0;padding:var(--s-6) 0 0">Add to cart opens the work in our secure checkout. Unique pieces are delivered personally. <a class="ul" href="{rel}framing.html">Framing and mounting</a> on request.</p>
+</div>
+<script id="shop-data" type="application/json">{data}</script>'''
 def scripts(rel=""):
-    return f'<script src="{rel}js/lib/lenis.min.js"></script><script src="{rel}js/lib/gsap.min.js"></script><script src="{rel}js/lib/ScrollTrigger.min.js"></script><script src="{rel}js/site.js?v={STAMP}"></script>\n</body></html>'
+    return shop_panel(rel) + f'<script src="{rel}js/lib/lenis.min.js"></script><script src="{rel}js/lib/gsap.min.js"></script><script src="{rel}js/lib/ScrollTrigger.min.js"></script><script src="{rel}js/site.js?v={STAMP}"></script>\n</body></html>'
 def artist_card(a, rel=""):
     n = len([w for w in WORKS if w["artist"] == a["slug"]])
     return f'''<a class="artist-card" href="{rel}artists/{a["slug"]}.html" data-reveal><div class="ph"><img src="{rel}{a["portrait"]}" alt="{E(a["name"])}" loading="lazy"></div><p class="name">{E(a["name"])}</p><p class="place">{E(a["born"])}</p><p class="count">{n} work{"s" if n != 1 else ""}</p></a>'''
@@ -84,7 +96,7 @@ def home():
     <p class="caption" data-reveal>Contemporary art gallery · Paris 12e</p>
     <h1 class="display-1" data-reveal="0.08">Discover Latin American art.</h1>
     <div class="grid"><p class="body-l span-5" data-reveal="0.16" style="color:rgba(250,247,238,.85)">Painting, sculpture, photography and new media from Colombia, Venezuela and Argentina, shown and sold in Paris.</p>
-    <div class="span-7 row" style="justify-content:flex-end;align-self:end" data-reveal="0.24"><a class="btn btn-accent" href="shop.html">Shop the works</a><a class="btn" style="border-color:rgba(250,247,238,.6);color:var(--paper)" href="artists.html">The artists</a></div></div>
+    <div class="span-7 row" style="justify-content:flex-end;align-self:end" data-reveal="0.24"><a class="btn btn-accent" href="shop.html" data-shop-open>Shop the works</a><a class="btn" style="border-color:rgba(250,247,238,.6);color:var(--paper)" href="artists.html">The artists</a></div></div>
   </div></section>
 <section class="section"><div class="container">
   <div class="feature"><div class="img" data-reveal><img src="{ev["image"]}" alt="{E(ev["title"])}" loading="lazy"></div>

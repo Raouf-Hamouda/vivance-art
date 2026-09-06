@@ -193,3 +193,12 @@ h1, h2, h3, h4, p, figure, ul, ol, dl, dd { margin: 0; } ul, ol { padding: 0; li
   .artist-head { padding-top: calc(var(--nav-h) + var(--s-6)); } .artist-head .display-1 { font-size: clamp(2.4rem, 11vw, 3.2rem); }
   .footer .big { font-size: clamp(3rem, 18vw, 5rem); }
 }
+
+/* shop panel: the shop as a layer over any page */
+.shop-panel { position: fixed; inset: 0; z-index: 200; background: var(--paper); color: var(--ink); overflow-y: auto; -webkit-overflow-scrolling: touch; padding: var(--s-6) var(--content-x) var(--s-9);
+              transform: translateY(2%); opacity: 0; transition: opacity var(--d-base) var(--ease), transform var(--d-slow) var(--ease-expo); }
+.shop-panel[hidden] { display: none; } .shop-panel.open { opacity: 1; transform: none; }
+html.shop-open, html.shop-open body { overflow: hidden; }
+.shop-head { display: flex; justify-content: space-between; align-items: flex-end; gap: var(--s-5); flex-wrap: wrap; padding-bottom: var(--s-5); border-bottom: 1px solid var(--ink); }
+.shop-filters { padding: var(--s-4) 0; border-bottom: 1px solid var(--line); margin-bottom: var(--s-7); position: sticky; top: 0; background: var(--paper); z-index: 2; }
+@media (max-width: 639.98px) { .shop-panel { padding-top: var(--s-5); } .shop-head .row { width: 100%; } .shop-head .row .btn { flex: 1; justify-content: center; } .shop-filters { position: static; } }
