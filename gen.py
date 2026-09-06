@@ -36,7 +36,7 @@ def footer(rel=""):
     <div class="col"><p class="title">Gallery</p>{"".join(f'<a class="link" href="{rel}{h}">{E(t)}</a>' for t, h in NAV)}<a class="link" href="{rel}legal.html">Legal</a></div>
     <div class="col"><p class="title">Visit</p><p>{E(B["address"])}</p><a class="link" href="mailto:{B["email"]}">{B["email"]}</a><a class="link" href="{B["instagram"]}" target="_blank" rel="noopener">Instagram</a><a class="link" href="{rel}shop.html">Shop</a></div>
   </div>
-  <div class="big" aria-hidden="true"><img src="{rel}media/site/logo.svg" alt="Vivance Art Gallery" width="601" height="185" loading="lazy"></div>
+  <div class="big" aria-hidden="true"><img src="{rel}media/site/logo-type.svg" alt="Vivance Art Gallery" width="601" height="185" loading="lazy"></div>
   <div class="legal"><span>© {datetime.date.today().year} Vivance Art · Paris</span><span>Discover Latin American Art</span><a class="link" href="#top">Back to top</a></div>
 </div></footer>'''
 def shop_panel(rel=""):
