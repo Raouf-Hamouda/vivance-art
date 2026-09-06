@@ -7,7 +7,7 @@ ART = {a["slug"]: a for a in D["artists"]}; WORKS = sorted(D["works"], key=lambd
 NAV = [("Artists", "artists.html"), ("Works", "works.html"), ("Exhibitions", "exhibitions.html"), ("Framing", "framing.html"), ("About", "about.html"), ("Contact", "contact.html")]
 CART = "https://www.vivanceart.com/cart"
 def price(w): return f"€{int(w['price']):,}".replace(",", " ") if w.get("price") else ""
-def head(title, desc, rel="", image=None):
+def head(title, desc, rel="", image=None, white=False):
     img = SITE_URL + (image or "media/site/og.png")
     return f'''<!doctype html>
 <html lang="en" class="no-js">
@@ -19,7 +19,7 @@ def head(title, desc, rel="", image=None):
 <link rel="icon" href="{rel}media/site/favicon.svg" type="image/svg+xml"><link rel="icon" href="{rel}media/site/favicon-32.png" sizes="32x32" type="image/png"><link rel="icon" href="{rel}media/site/favicon-192.png" sizes="192x192" type="image/png"><link rel="apple-touch-icon" href="{rel}media/site/favicon-180.png"><meta name="theme-color" content="#faf7ee">
 <link rel="stylesheet" href="{rel}css/fonts.css?v={STAMP}"><link rel="stylesheet" href="{rel}css/vivance.css?v={STAMP}">
 </head>
-<body>'''
+<body{" class=on-white" if white else ""}>'''
 def nav(current="", rel="", dark=False):
     items = "".join(f'<a class="link" href="{rel}{h}"{" aria-current=page" if h == current else ""}>{E(t)}</a>' for t, h in NAV)
     menu = "".join(f'<a class="item" href="{rel}{h}"{" aria-current=page" if h == current else ""}>{E(t)}<span class="n">{i+1:02d}</span></a>' for i, (t, h) in enumerate(NAV))
@@ -110,7 +110,7 @@ def home():
   <div class="sec-head"><h2 class="h2">Artists</h2><a class="link body-s" href="artists.html">All {len(D["artists"])} artists</a></div>
   <div class="artist-cards">{rows}</div>
 </div></section>
-<section class="section" style="background:var(--paper-2)"><div class="container">
+<section class="section white-sec"><div class="container">
   <div class="sec-head"><h2 class="h2">Available works</h2><a class="link body-s" href="works.html">All {len(WORKS)} works</a></div>
   <div class="works">{"".join(work_card(w) for w in pick)}</div>
 </div></section>
@@ -163,7 +163,7 @@ def artist(a):
   <figure class="portrait" data-reveal><img src="{rel}{a["portrait"]}" alt="{E(a["name"])}"><figcaption class="caption">{E(a["name"])}, {E(a["born"].split(",")[-1].strip()) if a["born"] else ""}</figcaption></figure>
   <div class="bio" data-reveal="0.1"><p class="lead serif">{E(lead)}</p>{rest}<div class="links">{links}<a class="btn btn-ink" href="mailto:{B["email"]}?subject={E(a["name"])}">Inquire about {E(a["name"].split()[0])}</a></div></div>
 </div></section>
-{"<section class='section' style='padding-top:0'><div class='container'><div class='sec-head'><h2 class='h2'>Works</h2><span class='body-s muted'>" + (f"{len(avail)} available · {len(sold)} sold" if sold else f"{len(avail)} available") + "</span></div><div class='works'>" + "".join(work_card(w, rel, False) for w in ws) + "</div></div></section>" if ws else ""}
+{"<section class='section white-sec'><div class='container'><div class='sec-head'><h2 class='h2'>Works</h2><span class='body-s muted'>" + (f"{len(avail)} available · {len(sold)} sold" if sold else f"{len(avail)} available") + "</span></div><div class='works'>" + "".join(work_card(w, rel, False) for w in ws) + "</div></div></section>" if ws else ""}
 <section class="section-s" style="border-top:1px solid var(--ink)"><div class="container artist-nav">
   <a class="prevnext" href="{rel}artists/{prev["slug"]}.html"><span class="caption">Previous artist</span><span class="h2 serif">{E(prev["name"])}</span></a>
   <a class="prevnext right" href="{rel}artists/{nxt["slug"]}.html"><span class="caption">Next artist</span><span class="h2 serif">{E(nxt["name"])}</span></a>
@@ -175,7 +175,7 @@ def artist(a):
 def works():
     tabs = '<button class="tab" data-f="artist" data-v="all" aria-selected="true">All artists</button>' + "".join(f'<button class="tab" data-f="artist" data-v="{a["slug"]}" aria-selected="false">{E(a["name"])}</button>' for a in D["artists"] if any(w["artist"] == a["slug"] for w in WORKS))
     tabs += '<span class="sep"></span><button class="tab" data-f="avail" data-v="all" aria-selected="true">All</button><button class="tab" data-f="avail" data-v="available" aria-selected="false">Available</button>'
-    return f'''{head("Works · Vivance Art", "All works available at Vivance Art: painting, sculpture, photography from Latin American artists.")}
+    return f'''{head("Works · Vivance Art", "All works available at Vivance Art: painting, sculpture, photography from Latin American artists.", white=True)}
 {nav("works.html")}
 <main id="top">
 <section class="page-hero"><div class="container stack"><p class="caption" data-reveal>Works · {len(WORKS)} · {len([w for w in WORKS if not w["sold"]])} available</p><h1 class="display-2" data-reveal="0.08">Every work is unique.</h1><p class="muted measure-l" data-reveal="0.12">Prices are those of our online shop. Acquisition is completed there, with secure checkout, or directly with the gallery.</p><div class="filters" data-reveal="0.16">{tabs}</div></div></section>
@@ -192,7 +192,7 @@ def work(w):
     acquire = ('<span class="btn is-sold">Sold</span>' if w["sold"] else
                (f'<a class="btn btn-accent" href="{direct}">Buy now · {price(w)}</a>' if direct else
                 f'<a class="btn btn-accent" href="{w["shop_url"]}" target="_blank" rel="noopener">Add to cart · {price(w)} ↗</a>'))
-    return f'''{head(f'{w["title"]} · {a.get("name","")} · Vivance Art', f'{w["title"]} by {a.get("name","")}' + (f', {year}' if year else '') + (f'. {price(w)}.' if w.get("price") and not w["sold"] else ''), rel, w["images"][0] if w["images"] else None)}
+    return f'''{head(f'{w["title"]} · {a.get("name","")} · Vivance Art', f'{w["title"]} by {a.get("name","")}' + (f', {year}' if year else '') + (f'. {price(w)}.' if w.get("price") and not w["sold"] else ''), rel, w["images"][0] if w["images"] else None, white=True)}
 {nav("works.html", rel)}
 <main id="top">
 <section class="section" style="padding-top:calc(var(--nav-h) + var(--s-7))"><div class="container work-page">
@@ -213,7 +213,7 @@ def shop():
     tabs = '<button class="tab" data-f="artist" data-v="all" aria-selected="true">All artists</button>' + "".join(f'<button class="tab" data-f="artist" data-v="{a["slug"]}" aria-selected="false">{E(a["name"])}</button>' for a in D["artists"] if any(w["artist"] == a["slug"] for w in WORKS))
     tabs += '<span class="sep"></span><button class="tab" data-f="avail" data-v="all" aria-selected="true">All</button><button class="tab" data-f="avail" data-v="available" aria-selected="false">Available</button>'
     avail = [w for w in WORKS if not w["sold"]]
-    return f'''{head("Shop · Vivance Art", "Acquire original works by Latin American artists: painting, sculpture, photography. Secure checkout.")}
+    return f'''{head("Shop · Vivance Art", "Acquire original works by Latin American artists: painting, sculpture, photography. Secure checkout.", white=True)}
 {nav("shop.html")}
 <main id="top">
 <section class="page-hero"><div class="container stack"><p class="caption" data-reveal>Shop · {len(avail)} works available</p><h1 class="display-2" data-reveal="0.08">Original works, acquired in a few clicks.</h1><p class="muted measure-l" data-reveal="0.12">Buy now takes you straight to our secure checkout with the work. Unique pieces are delivered personally; framing and mounting on request. Questions before buying: <a class="ul" href="contact.html">write to us</a>.</p></div></section>
