@@ -146,7 +146,7 @@ def artist(a):
     for w in ws:
         for k, v in w["details"]:
             if k == "Technique":
-                key = v.lower().replace("3d ", "").replace("plexiglas ", "plexiglass ").replace("plexiglas", "plexiglass").strip()
+                key = __import__("re").sub(r"[^a-z]", "", __import__("re").sub(r"\b3d\b", "", v.lower())).replace("plexiglass", "plexiglas")
                 if key not in seen: seen[key] = v[0].upper() + v[1:]
     disciplines = list(seen.values())[:3]
     sig_html = (f'''<a class="signature" href="{rel}works/{sig["slug"]}.html" data-reveal="0.1"><img src="{rel}{sig["images"][0]}" alt="{E(sig["title"])}"><figcaption><span><i>{E(sig["title"])}</i>{", " + next((v for k, v in sig["details"] if k == "Year"), "") if next((v for k, v in sig["details"] if k == "Year"), "") else ""}</span><span>{"Sold" if sig["sold"] else price(sig)} →</span></figcaption></a>''' if sig and sig["images"] else "")
