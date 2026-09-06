@@ -46,7 +46,8 @@ def artist_card(a, rel=""):
     return f'''<a class="artist-card" href="{rel}artists/{a["slug"]}.html" data-reveal><div class="ph"><img src="{rel}{a["portrait"]}" alt="{E(a["name"])}" loading="lazy"></div><p class="name">{E(a["name"])}</p><p class="place">{E(a["born"])}</p><p class="count">{n} work{"s" if n != 1 else ""}</p></a>'''
 def product_card(w, rel=""):
     a = ART.get(w["artist"], {}); img = w["images"][0] if w["images"] else ""; year = next((v for k, v in w["details"] if k == "Year"), "")
-    buy = (f'<a class="btn btn-accent" href="{w["shop_url"]}" target="_blank" rel="noopener">Add to cart ↗</a>' if not w["sold"] else '<span class="btn is-sold">Sold</span>') + f'<a class="btn btn-ghost" href="{rel}works/{w["slug"]}.html">Details</a>'
+    direct = w.get("checkout_url")
+    buy = ('<span class="btn is-sold">Sold</span>' if w["sold"] else (f'<a class="btn btn-accent" href="{direct}" target="_blank" rel="noopener">Buy now</a>' if direct else f'<a class="btn btn-accent" href="{w["shop_url"]}" target="_blank" rel="noopener">Add to cart ↗</a>')) + f'<a class="btn btn-ghost" href="{rel}works/{w["slug"]}.html">Details</a>'
     return f'''<article class="product" data-artist="{w["artist"]}" data-avail="{"sold" if w["sold"] else "available"}" data-price="{w.get("price") or 0}" data-reveal>
   <a class="frame" href="{rel}works/{w["slug"]}.html"><img src="{rel}{img}" alt="{E(w["title"])}" loading="lazy">{'<span class="pill sold">Sold</span>' if w["sold"] else ""}</a>
   <p class="a">{E(a.get("name",""))}</p><p class="t"><i>{E(w["title"])}</i>{", " + E(year) if year else ""}</p><p class="p{" sold" if w["sold"] else ""}">{"Sold" if w["sold"] else price(w)}</p>
@@ -150,7 +151,10 @@ def work(w):
     gal = "".join(f'<figure><img src="{rel}{im}" alt="{E(w["title"])}" {"" if i == 0 else "loading=lazy"}></figure>' for i, im in enumerate(w["images"]))
     dl = "".join(f"<dt>{E(k)}</dt><dd>{E(v)}</dd>" for k, v in w["details"])
     year = next((v for k, v in w["details"] if k == "Year"), "")
-    acquire = (f'<a class="btn btn-accent" href="{w["shop_url"]}" target="_blank" rel="noopener">Acquire · {price(w)} ↗</a>' if not w["sold"] else '<span class="btn is-sold">Sold</span>')
+    direct = w.get("checkout_url")
+    acquire = ('<span class="btn is-sold">Sold</span>' if w["sold"] else
+               (f'<a class="btn btn-accent" href="{direct}" target="_blank" rel="noopener">Buy now · {price(w)}</a>' if direct else
+                f'<a class="btn btn-accent" href="{w["shop_url"]}" target="_blank" rel="noopener">Add to cart · {price(w)} ↗</a>'))
     return f'''{head(f'{w["title"]} · {a.get("name","")} · Vivance Art', f'{w["title"]} by {a.get("name","")}' + (f', {year}' if year else '') + (f'. {price(w)}.' if w.get("price") and not w["sold"] else ''), rel, w["images"][0] if w["images"] else None)}
 {nav("works.html", rel)}
 <main id="top">
@@ -161,7 +165,7 @@ def work(w):
     <dl>{dl}</dl>
     <p class="price">{"Sold" if w["sold"] else price(w)}</p>
     <div class="actions">{acquire}<a class="btn" href="mailto:{B["email"]}?subject={E(w["title"])} · {E(a.get("name",""))}">Inquire</a>
-      <p class="note">Acquisition goes through our online shop (secure checkout) or directly with the gallery. Unique pieces: delivery is arranged personally with the buyer. <a class="ul" href="{rel}framing.html">Framing and mounting</a> on request.</p></div>
+      <p class="note">Add to cart opens this work in our secure checkout, where the purchase is completed. Unique pieces: delivery is arranged personally with the buyer. <a class="ul" href="{rel}framing.html">Framing and mounting</a> on request.</p></div>
   </aside>
 </div></section>
 {"<section class='section' style='padding-top:0'><div class='container'><div class='sec-head'><h2 class='h2'>More by " + E(a.get("name","")) + "</h2><a class='link body-s' href='" + rel + "artists/" + a.get("slug","") + ".html'>Artist page</a></div><div class='works four'>" + "".join(work_card(x, rel, False) for x in others) + "</div></div></section>" if others else ""}

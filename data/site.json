@@ -229,7 +229,8 @@
     "media/works/work-05-1.jpg",
     "media/works/work-05-2.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/0bra-06-de-la-serie-momentos"
+   "shop_url": "https://www.vivanceart.com/shop/p/0bra-06-de-la-serie-momentos",
+   "checkout_url": ""
   },
   {
    "slug": "the-fisherman-3rd",
@@ -261,7 +262,8 @@
     "media/works/the-fisherman-3rd-1.jpg",
     "media/works/the-fisherman-3rd-2.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/0lq9kaubkmvz1cr6d9nw9hj53ic1cm"
+   "shop_url": "https://www.vivanceart.com/shop/p/0lq9kaubkmvz1cr6d9nw9hj53ic1cm",
+   "checkout_url": ""
   },
   {
    "slug": "ripping-1",
@@ -292,7 +294,8 @@
    "images": [
     "media/works/ripping-1-1.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/8bhfcsszjg9qoajgpyxwfj6g797vl7"
+   "shop_url": "https://www.vivanceart.com/shop/p/8bhfcsszjg9qoajgpyxwfj6g797vl7",
+   "checkout_url": ""
   },
   {
    "slug": "fragmento-de-oro",
@@ -319,7 +322,8 @@
    "images": [
     "media/works/fragmento-de-oro-1.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/8zg53kg7gyr2b6k6bytzd5e92md3qt"
+   "shop_url": "https://www.vivanceart.com/shop/p/8zg53kg7gyr2b6k6bytzd5e92md3qt",
+   "checkout_url": ""
   },
   {
    "slug": "adoquines-con-diseno",
@@ -346,7 +350,8 @@
    "images": [
     "media/works/adoquines-con-diseno-1.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/adoquine-con-diseo-2025"
+   "shop_url": "https://www.vivanceart.com/shop/p/adoquine-con-diseo-2025",
+   "checkout_url": ""
   },
   {
    "slug": "la-subienda",
@@ -373,7 +378,8 @@
    "images": [
     "media/works/la-subienda-1.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/air-no-1-c84c8"
+   "shop_url": "https://www.vivanceart.com/shop/p/air-no-1-c84c8",
+   "checkout_url": ""
   },
   {
    "slug": "el-dorado",
@@ -400,7 +406,8 @@
    "images": [
     "media/works/el-dorado-1.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/air-no-2-tt3ny"
+   "shop_url": "https://www.vivanceart.com/shop/p/air-no-2-tt3ny",
+   "checkout_url": ""
   },
   {
    "slug": "noche-1001",
@@ -427,7 +434,8 @@
    "images": [
     "media/works/noche-1001-1.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/air-no-3-framed-e9jzl"
+   "shop_url": "https://www.vivanceart.com/shop/p/air-no-3-framed-e9jzl",
+   "checkout_url": ""
   },
   {
    "slug": "l-orangerie",
@@ -454,7 +462,8 @@
    "images": [
     "media/works/l-orangerie-1.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/air-no-4-73gea"
+   "shop_url": "https://www.vivanceart.com/shop/p/air-no-4-73gea",
+   "checkout_url": ""
   },
   {
    "slug": "odyssey",
@@ -481,7 +490,8 @@
    "images": [
     "media/works/odyssey-1.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/air-no-5-gbbre"
+   "shop_url": "https://www.vivanceart.com/shop/p/air-no-5-gbbre",
+   "checkout_url": ""
   },
   {
    "slug": "lamour",
@@ -508,7 +518,8 @@
    "images": [
     "media/works/lamour-1.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/air-no-6-ete6t"
+   "shop_url": "https://www.vivanceart.com/shop/p/air-no-6-ete6t",
+   "checkout_url": ""
   },
   {
    "slug": "the-fisherman-1st",
@@ -540,7 +551,8 @@
     "media/works/the-fisherman-1st-1.jpg",
     "media/works/the-fisherman-1st-2.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/ana-paula"
+   "shop_url": "https://www.vivanceart.com/shop/p/ana-paula",
+   "checkout_url": ""
   },
   {
    "slug": "azul",
@@ -568,7 +580,8 @@
     "media/works/azul-1.jpg",
     "media/works/azul-2.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/azul"
+   "shop_url": "https://www.vivanceart.com/shop/p/azul",
+   "checkout_url": ""
   },
   {
    "slug": "chocoramo",
@@ -595,7 +608,8 @@
    "images": [
     "media/works/chocoramo-1.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/chocoramo"
+   "shop_url": "https://www.vivanceart.com/shop/p/chocoramo",
+   "checkout_url": ""
   },
   {
    "slug": "the-fisherman-2nd",
@@ -627,7 +641,8 @@
     "media/works/the-fisherman-2nd-1.jpg",
     "media/works/the-fisherman-2nd-2.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/cqf4h42mhcgko3kjkfsojkntz6bscc"
+   "shop_url": "https://www.vivanceart.com/shop/p/cqf4h42mhcgko3kjkfsojkntz6bscc",
+   "checkout_url": ""
   },
   {
    "slug": "vs",
@@ -655,7 +670,8 @@
     "media/works/vs-1.jpg",
     "media/works/vs-2.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/cuadreo"
+   "shop_url": "https://www.vivanceart.com/shop/p/cuadreo",
+   "checkout_url": ""
   },
   {
    "slug": "desierto-cabo-de-la-vela",
@@ -687,7 +703,8 @@
     "media/works/desierto-cabo-de-la-vela-1.jpg",
     "media/works/desierto-cabo-de-la-vela-2.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/desierto-cabo-de-la-vela"
+   "shop_url": "https://www.vivanceart.com/shop/p/desierto-cabo-de-la-vela",
+   "checkout_url": ""
   },
   {
    "slug": "dunkin",
@@ -714,7 +731,8 @@
    "images": [
     "media/works/dunkin-1.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/dunkin"
+   "shop_url": "https://www.vivanceart.com/shop/p/dunkin",
+   "checkout_url": ""
   },
   {
    "slug": "filigrana",
@@ -739,7 +757,8 @@
     "media/works/filigrana-2.jpg",
     "media/works/filigrana-3.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/filigrana-2025"
+   "shop_url": "https://www.vivanceart.com/shop/p/filigrana-2025",
+   "checkout_url": ""
   },
   {
    "slug": "coral-marino",
@@ -763,7 +782,8 @@
     "media/works/coral-marino-1.jpg",
     "media/works/coral-marino-2.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/form-no-1-3k3sy"
+   "shop_url": "https://www.vivanceart.com/shop/p/form-no-1-3k3sy",
+   "checkout_url": ""
   },
   {
    "slug": "coral-marino-2",
@@ -786,7 +806,8 @@
    "images": [
     "media/works/coral-marino-2-1.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/form-no-2-4gzfw"
+   "shop_url": "https://www.vivanceart.com/shop/p/form-no-2-4gzfw",
+   "checkout_url": ""
   },
   {
    "slug": "precolombino",
@@ -815,7 +836,8 @@
     "media/works/precolombino-2.jpg",
     "media/works/precolombino-3.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/form-no-3-7mtpt"
+   "shop_url": "https://www.vivanceart.com/shop/p/form-no-3-7mtpt",
+   "checkout_url": ""
   },
   {
    "slug": "coral-marino-3",
@@ -844,7 +866,8 @@
     "media/works/coral-marino-3-2.jpg",
     "media/works/coral-marino-3-3.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/form-no-4-ezkzt"
+   "shop_url": "https://www.vivanceart.com/shop/p/form-no-4-ezkzt",
+   "checkout_url": ""
   },
   {
    "slug": "fragmento-plata",
@@ -871,7 +894,8 @@
    "images": [
     "media/works/fragmento-plata-1.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/fragmento-plata-2025"
+   "shop_url": "https://www.vivanceart.com/shop/p/fragmento-plata-2025",
+   "checkout_url": ""
   },
   {
    "slug": "heineken",
@@ -898,7 +922,8 @@
    "images": [
     "media/works/heineken-1.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/heineken"
+   "shop_url": "https://www.vivanceart.com/shop/p/heineken",
+   "checkout_url": ""
   },
   {
    "slug": "infinito",
@@ -925,7 +950,8 @@
    "images": [
     "media/works/infinito-1.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/infinito-2025"
+   "shop_url": "https://www.vivanceart.com/shop/p/infinito-2025",
+   "checkout_url": ""
   },
   {
    "slug": "ripping-2",
@@ -956,7 +982,8 @@
    "images": [
     "media/works/ripping-2-1.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/irr9ql7b2mz7jw6m2ibgwgzteoftya"
+   "shop_url": "https://www.vivanceart.com/shop/p/irr9ql7b2mz7jw6m2ibgwgzteoftya",
+   "checkout_url": ""
   },
   {
    "slug": "seleccion",
@@ -987,7 +1014,8 @@
    "images": [
     "media/works/seleccion-1.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/leaf-no-1-tcnxf"
+   "shop_url": "https://www.vivanceart.com/shop/p/leaf-no-1-tcnxf",
+   "checkout_url": ""
   },
   {
    "slug": "valor",
@@ -1018,7 +1046,8 @@
    "images": [
     "media/works/valor-1.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/leaf-no-1-tcnxf-888jg"
+   "shop_url": "https://www.vivanceart.com/shop/p/leaf-no-1-tcnxf-888jg",
+   "checkout_url": ""
   },
   {
    "slug": "niveles",
@@ -1050,7 +1079,8 @@
     "media/works/niveles-1.jpg",
     "media/works/niveles-2.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/leaf-no-1-tcnxf-888jg-j6slg"
+   "shop_url": "https://www.vivanceart.com/shop/p/leaf-no-1-tcnxf-888jg-j6slg",
+   "checkout_url": ""
   },
   {
    "slug": "pasion",
@@ -1082,7 +1112,8 @@
     "media/works/pasion-1.jpg",
     "media/works/pasion-2.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/leaf-no-3-xzbzj"
+   "shop_url": "https://www.vivanceart.com/shop/p/leaf-no-3-xzbzj",
+   "checkout_url": ""
   },
   {
    "slug": "defensa",
@@ -1113,7 +1144,8 @@
    "images": [
     "media/works/defensa-1.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/leaf-no-5-9cffl"
+   "shop_url": "https://www.vivanceart.com/shop/p/leaf-no-5-9cffl",
+   "checkout_url": ""
   },
   {
    "slug": "entrelazados",
@@ -1137,7 +1169,8 @@
     "media/works/entrelazados-1.jpg",
     "media/works/entrelazados-2.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/luuzl58x2uw90qkhy2n70lhpp9a57x"
+   "shop_url": "https://www.vivanceart.com/shop/p/luuzl58x2uw90qkhy2n70lhpp9a57x",
+   "checkout_url": ""
   },
   {
    "slug": "nina-guajira",
@@ -1168,7 +1201,8 @@
    "images": [
     "media/works/nina-guajira-1.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/nia-guajira-sold"
+   "shop_url": "https://www.vivanceart.com/shop/p/nia-guajira-sold",
+   "checkout_url": ""
   },
   {
    "slug": "nicotina",
@@ -1196,7 +1230,8 @@
     "media/works/nicotina-1.jpg",
     "media/works/nicotina-2.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/nicotina"
+   "shop_url": "https://www.vivanceart.com/shop/p/nicotina",
+   "checkout_url": ""
   },
   {
    "slug": "portrait-de-palenquera-01",
@@ -1224,7 +1259,8 @@
     "media/works/portrait-de-palenquera-01-1.jpg",
     "media/works/portrait-de-palenquera-01-2.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/palenquera-01"
+   "shop_url": "https://www.vivanceart.com/shop/p/palenquera-01",
+   "checkout_url": ""
   },
   {
    "slug": "portrait-de-palenquera-02",
@@ -1252,7 +1288,8 @@
     "media/works/portrait-de-palenquera-02-1.jpg",
     "media/works/portrait-de-palenquera-02-2.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/palenquera-02"
+   "shop_url": "https://www.vivanceart.com/shop/p/palenquera-02",
+   "checkout_url": ""
   },
   {
    "slug": "portrait-de-palenquera-03",
@@ -1280,7 +1317,8 @@
     "media/works/portrait-de-palenquera-03-1.jpg",
     "media/works/portrait-de-palenquera-03-2.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/palenquera-03"
+   "shop_url": "https://www.vivanceart.com/shop/p/palenquera-03",
+   "checkout_url": ""
   },
   {
    "slug": "playa-cabo",
@@ -1312,7 +1350,8 @@
     "media/works/playa-cabo-1.jpg",
     "media/works/playa-cabo-2.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/playa-cabo"
+   "shop_url": "https://www.vivanceart.com/shop/p/playa-cabo",
+   "checkout_url": ""
   },
   {
    "slug": "princesa-guajira",
@@ -1344,7 +1383,8 @@
     "media/works/princesa-guajira-1.jpg",
     "media/works/princesa-guajira-2.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/princesa-guajira"
+   "shop_url": "https://www.vivanceart.com/shop/p/princesa-guajira",
+   "checkout_url": ""
   },
   {
    "slug": "work-05-2",
@@ -1372,7 +1412,8 @@
     "media/works/work-05-2-1.jpg",
     "media/works/work-05-2-2.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/rabbit-obra-05-de-la-serie-momentos"
+   "shop_url": "https://www.vivanceart.com/shop/p/rabbit-obra-05-de-la-serie-momentos",
+   "checkout_url": ""
   },
   {
    "slug": "la-maga",
@@ -1400,7 +1441,8 @@
     "media/works/la-maga-1.jpg",
     "media/works/la-maga-2.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/rafa"
+   "shop_url": "https://www.vivanceart.com/shop/p/rafa",
+   "checkout_url": ""
   },
   {
    "slug": "rojo",
@@ -1428,7 +1470,8 @@
     "media/works/rojo-1.jpg",
     "media/works/rojo-2.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/rojo"
+   "shop_url": "https://www.vivanceart.com/shop/p/rojo",
+   "checkout_url": ""
   },
   {
    "slug": "spiaggia-verde",
@@ -1455,7 +1498,8 @@
    "images": [
     "media/works/spiaggia-verde-1.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/sand-no-1-blkax"
+   "shop_url": "https://www.vivanceart.com/shop/p/sand-no-1-blkax",
+   "checkout_url": ""
   },
   {
    "slug": "cada-loco-con-su-globo",
@@ -1483,7 +1527,8 @@
     "media/works/cada-loco-con-su-globo-1.jpg",
     "media/works/cada-loco-con-su-globo-2.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/sand-no-2-pj96h"
+   "shop_url": "https://www.vivanceart.com/shop/p/sand-no-2-pj96h",
+   "checkout_url": ""
   },
   {
    "slug": "dos-ruedas",
@@ -1510,7 +1555,8 @@
    "images": [
     "media/works/dos-ruedas-1.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/sand-no-3-framed-a522n"
+   "shop_url": "https://www.vivanceart.com/shop/p/sand-no-3-framed-a522n",
+   "checkout_url": ""
   },
   {
    "slug": "cayeron-los-globos",
@@ -1537,7 +1583,8 @@
    "images": [
     "media/works/cayeron-los-globos-1.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/sand-no-4-jpamt"
+   "shop_url": "https://www.vivanceart.com/shop/p/sand-no-4-jpamt",
+   "checkout_url": ""
   },
   {
    "slug": "toma-te-lo-bueno",
@@ -1569,7 +1616,8 @@
     "media/works/toma-te-lo-bueno-1.jpg",
     "media/works/toma-te-lo-bueno-2.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/toma-t-lo-bueno-de-la-serie-sinestesia"
+   "shop_url": "https://www.vivanceart.com/shop/p/toma-t-lo-bueno-de-la-serie-sinestesia",
+   "checkout_url": ""
   },
   {
    "slug": "viaje-por-el-rio-grande",
@@ -1597,7 +1645,8 @@
     "media/works/viaje-por-el-rio-grande-1.jpg",
     "media/works/viaje-por-el-rio-grande-2.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/un-viaje-por-el-rio-grande"
+   "shop_url": "https://www.vivanceart.com/shop/p/un-viaje-por-el-rio-grande",
+   "checkout_url": ""
   },
   {
    "slug": "vendeur-de-bouees-avec-bermuda-imprimee",
@@ -1625,7 +1674,8 @@
     "media/works/vendeur-de-bouees-avec-bermuda-imprimee-1.jpg",
     "media/works/vendeur-de-bouees-avec-bermuda-imprimee-2.jpg"
    ],
-   "shop_url": "https://www.vivanceart.com/shop/p/vendeur-de-boues-avec-bermuda"
+   "shop_url": "https://www.vivanceart.com/shop/p/vendeur-de-boues-avec-bermuda",
+   "checkout_url": ""
   }
  ],
  "events": [
