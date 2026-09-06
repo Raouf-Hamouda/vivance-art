@@ -28,7 +28,7 @@ def nav(current="", rel="", dark=False):
   <div class="nav-items">{items}<a class="btn btn-ghost shop" href="{rel}shop.html" data-shop-open{" aria-current=page" if current == "shop.html" else ""}>Shop</a></div>
   <button class="burger" aria-expanded="false" aria-controls="menu">Menu</button>
 </nav>
-<div class="menu" id="menu">{menu}<a class="item" href="{rel}shop.html" data-shop-open{" aria-current=page" if current == "shop.html" else ""}>Shop<span class="n">07</span></a><div class="foot"><a href="mailto:{B["email"]}">{B["email"]}</a><a href="{B["instagram"]}" target="_blank" rel="noopener">Instagram</a><span>{E(B["address"])}</span></div></div>'''
+<div class="menu" id="menu" data-lenis-prevent>{menu}<a class="item" href="{rel}shop.html" data-shop-open{" aria-current=page" if current == "shop.html" else ""}>Shop<span class="n">07</span></a><div class="foot"><a href="mailto:{B["email"]}">{B["email"]}</a><a href="{B["instagram"]}" target="_blank" rel="noopener">Instagram</a><span>{E(B["address"])}</span></div></div>'''
 def footer(rel=""):
     return f'''<footer class="footer"><div class="container">
   <div class="cols">
@@ -42,8 +42,8 @@ def footer(rel=""):
 def shop_panel(rel=""):
     items = [{"t": w["title"], "a": ART.get(w["artist"], {}).get("name", ""), "as": w["artist"], "p": price(w), "sold": w["sold"], "img": rel + (w["images"][0] if w["images"] else ""), "url": rel + f"works/{w['slug']}.html", "buy": w.get("checkout_url") or w["shop_url"], "direct": bool(w.get("checkout_url")), "y": next((v for k, v in w["details"] if k == "Year"), "")} for w in WORKS]
     arts = [{"s": a["slug"], "n": a["name"]} for a in D["artists"] if any(w["artist"] == a["slug"] for w in WORKS)]
-    data = json.dumps({"items": items, "artists": arts, "cart": CART}, ensure_ascii=False).replace("</", "<\\/")
-    return f'''<div class="shop-panel" id="shop" role="dialog" aria-modal="true" aria-label="Shop" hidden>
+    data = json.dumps({"items": items, "artists": arts}, ensure_ascii=False).replace("</", "<\\/")
+    return f'''<div class="shop-panel" id="shop" role="dialog" aria-modal="true" aria-label="Shop" data-lenis-prevent hidden>
   <div class="shop-head"><div><p class="caption">Shop · <span data-shop-count></span> works available</p><p class="h2 serif">Original works, secure checkout.</p></div>
     <div class="row"><button class="btn btn-ghost" data-shop-close>Close</button></div></div>
   <div class="shop-filters filters" data-shop-filters></div>
