@@ -8,7 +8,7 @@ NAV = [("Artists", "artists.html"), ("Works", "works.html"), ("Exhibitions", "ex
 CART = "https://www.vivanceart.com/cart"
 def price(w): return f"€{int(w['price']):,}".replace(",", " ") if w.get("price") else ""
 def head(title, desc, rel="", image=None):
-    img = SITE_URL + (image or D["hero"])
+    img = SITE_URL + (image or "media/site/og.png")
     return f'''<!doctype html>
 <html lang="en" class="no-js">
 <head>
@@ -16,7 +16,7 @@ def head(title, desc, rel="", image=None):
 <title>{E(title)}</title><meta name="description" content="{E(desc)}">
 <meta property="og:title" content="{E(title)}"><meta property="og:description" content="{E(desc)}"><meta property="og:type" content="website"><meta property="og:site_name" content="Vivance Art">
 <meta property="og:image" content="{img}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="{img}">
-<link rel="icon" href="{rel}media/site/favicon.svg" type="image/svg+xml"><meta name="theme-color" content="#faf7ee">
+<link rel="icon" href="{rel}media/site/favicon-32.png" sizes="32x32" type="image/png"><link rel="icon" href="{rel}media/site/favicon-192.png" sizes="192x192" type="image/png"><link rel="apple-touch-icon" href="{rel}media/site/favicon-180.png"><meta name="theme-color" content="#faf7ee">
 <link rel="stylesheet" href="{rel}css/fonts.css?v={STAMP}"><link rel="stylesheet" href="{rel}css/vivance.css?v={STAMP}">
 </head>
 <body>'''
@@ -24,7 +24,7 @@ def nav(current="", rel="", dark=False):
     items = "".join(f'<a class="link" href="{rel}{h}"{" aria-current=page" if h == current else ""}>{E(t)}</a>' for t, h in NAV)
     menu = "".join(f'<a class="item" href="{rel}{h}"{" aria-current=page" if h == current else ""}>{E(t)}<span class="n">{i+1:02d}</span></a>' for i, (t, h) in enumerate(NAV))
     return f'''<nav class="nav{" on-dark" if dark else ""}" data-nav aria-label="Main">
-  <a class="brand" href="{rel}index.html">Vivance Art<small>Paris</small></a>
+  <a class="brand" href="{rel}index.html" aria-label="Vivance Art, Paris"><img class="logo" src="{rel}media/site/logo.png" alt="Vivance Art Gallery"><small>Paris</small></a>
   <div class="nav-items">{items}<a class="btn btn-ghost shop" href="{rel}shop.html" data-shop-open{" aria-current=page" if current == "shop.html" else ""}>Shop</a><a class="link cart" href="{CART}" target="_blank" rel="noopener">Cart ↗</a></div>
   <button class="burger" aria-expanded="false" aria-controls="menu">Menu</button>
 </nav>
@@ -48,7 +48,7 @@ def shop_panel(rel=""):
     <div class="row"><a class="btn btn-ink" href="{CART}" target="_blank" rel="noopener">View cart ↗</a><button class="btn btn-ghost" data-shop-close>Close</button></div></div>
   <div class="shop-filters filters" data-shop-filters></div>
   <div class="shop-grid" data-shop-grid></div>
-  <p class="note caption" style="text-transform:none;letter-spacing:0;padding:var(--s-6) 0 0">Add to cart opens the work in our secure checkout. Unique pieces are delivered personally. <a class="ul" href="{rel}framing.html">Framing and mounting</a> on request.</p>
+  <p class="note caption" style="text-transform:none;letter-spacing:0;padding:var(--s-6) 0 0">Buy now goes straight to our secure checkout with the work. Unique pieces are delivered personally. <a class="ul" href="{rel}framing.html">Framing and mounting</a> on request.</p>
 </div>
 <script id="shop-data" type="application/json">{data}</script>'''
 def scripts(rel=""):
@@ -59,7 +59,7 @@ def artist_card(a, rel=""):
 def product_card(w, rel=""):
     a = ART.get(w["artist"], {}); img = w["images"][0] if w["images"] else ""; year = next((v for k, v in w["details"] if k == "Year"), "")
     direct = w.get("checkout_url")
-    buy = ('<span class="btn is-sold">Sold</span>' if w["sold"] else (f'<a class="btn btn-accent" href="{direct}" target="_blank" rel="noopener">Buy now</a>' if direct else f'<a class="btn btn-accent" href="{w["shop_url"]}" target="_blank" rel="noopener">Add to cart ↗</a>')) + f'<a class="btn btn-ghost" href="{rel}works/{w["slug"]}.html">Details</a>'
+    buy = ('<span class="btn is-sold">Sold</span>' if w["sold"] else (f'<a class="btn btn-accent" href="{direct}">Buy now</a>' if direct else f'<a class="btn btn-accent" href="{w["shop_url"]}" target="_blank" rel="noopener">Add to cart ↗</a>')) + f'<a class="btn btn-ghost" href="{rel}works/{w["slug"]}.html">Details</a>'
     return f'''<article class="product" data-artist="{w["artist"]}" data-avail="{"sold" if w["sold"] else "available"}" data-price="{w.get("price") or 0}" data-reveal>
   <a class="frame" href="{rel}works/{w["slug"]}.html"><img src="{rel}{img}" alt="{E(w["title"])}" loading="lazy">{'<span class="pill sold">Sold</span>' if w["sold"] else ""}</a>
   <p class="a">{E(a.get("name",""))}</p><p class="t"><i>{E(w["title"])}</i>{", " + E(year) if year else ""}</p><p class="p{" sold" if w["sold"] else ""}">{"Sold" if w["sold"] else price(w)}</p>
@@ -165,7 +165,7 @@ def work(w):
     year = next((v for k, v in w["details"] if k == "Year"), "")
     direct = w.get("checkout_url")
     acquire = ('<span class="btn is-sold">Sold</span>' if w["sold"] else
-               (f'<a class="btn btn-accent" href="{direct}" target="_blank" rel="noopener">Buy now · {price(w)}</a>' if direct else
+               (f'<a class="btn btn-accent" href="{direct}">Buy now · {price(w)}</a>' if direct else
                 f'<a class="btn btn-accent" href="{w["shop_url"]}" target="_blank" rel="noopener">Add to cart · {price(w)} ↗</a>'))
     return f'''{head(f'{w["title"]} · {a.get("name","")} · Vivance Art', f'{w["title"]} by {a.get("name","")}' + (f', {year}' if year else '') + (f'. {price(w)}.' if w.get("price") and not w["sold"] else ''), rel, w["images"][0] if w["images"] else None)}
 {nav("works.html", rel)}
@@ -177,7 +177,7 @@ def work(w):
     <dl>{dl}</dl>
     <p class="price">{"Sold" if w["sold"] else price(w)}</p>
     <div class="actions">{acquire}<a class="btn" href="mailto:{B["email"]}?subject={E(w["title"])} · {E(a.get("name",""))}">Inquire</a>
-      <p class="note">Add to cart opens this work in our secure checkout, where the purchase is completed. Unique pieces: delivery is arranged personally with the buyer. <a class="ul" href="{rel}framing.html">Framing and mounting</a> on request.</p></div>
+      <p class="note">Buy now takes you straight to our secure checkout with this work. Unique pieces are delivered personally. Unique pieces: delivery is arranged personally with the buyer. <a class="ul" href="{rel}framing.html">Framing and mounting</a> on request.</p></div>
   </aside>
 </div></section>
 {"<section class='section' style='padding-top:0'><div class='container'><div class='sec-head'><h2 class='h2'>More by " + E(a.get("name","")) + "</h2><a class='link body-s' href='" + rel + "artists/" + a.get("slug","") + ".html'>Artist page</a></div><div class='works four'>" + "".join(work_card(x, rel, False) for x in others) + "</div></div></section>" if others else ""}
@@ -191,7 +191,7 @@ def shop():
     return f'''{head("Shop · Vivance Art", "Acquire original works by Latin American artists: painting, sculpture, photography. Secure checkout.")}
 {nav("shop.html")}
 <main id="top">
-<section class="page-hero"><div class="container stack"><p class="caption" data-reveal>Shop · {len(avail)} works available</p><h1 class="display-2" data-reveal="0.08">Original works, acquired in a few clicks.</h1><p class="muted measure-l" data-reveal="0.12">Add to cart opens the work in our secure online checkout. Unique pieces are delivered personally; framing and mounting on request. Questions before buying: <a class="ul" href="contact.html">write to us</a>.</p></div></section>
+<section class="page-hero"><div class="container stack"><p class="caption" data-reveal>Shop · {len(avail)} works available</p><h1 class="display-2" data-reveal="0.08">Original works, acquired in a few clicks.</h1><p class="muted measure-l" data-reveal="0.12">Buy now takes you straight to our secure checkout with the work. Unique pieces are delivered personally; framing and mounting on request. Questions before buying: <a class="ul" href="contact.html">write to us</a>.</p></div></section>
 <section class="section" style="padding-top:0"><div class="container">
   <div class="shop-bar"><div class="filters">{tabs}</div><a class="btn btn-ink" href="{CART}" target="_blank" rel="noopener">View cart ↗</a></div>
   <div class="shop-grid" id="works">{"".join(product_card(w) for w in WORKS)}</div><p class="muted body-s" id="empty" hidden style="padding:var(--s-7) 0">No work matches this selection.</p>
