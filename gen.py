@@ -16,7 +16,7 @@ def head(title, desc, rel="", image=None):
 <title>{E(title)}</title><meta name="description" content="{E(desc)}">
 <meta property="og:title" content="{E(title)}"><meta property="og:description" content="{E(desc)}"><meta property="og:type" content="website"><meta property="og:site_name" content="Vivance Art">
 <meta property="og:image" content="{img}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="{img}">
-<link rel="icon" href="{rel}media/site/favicon-32.png" sizes="32x32" type="image/png"><link rel="icon" href="{rel}media/site/favicon-192.png" sizes="192x192" type="image/png"><link rel="apple-touch-icon" href="{rel}media/site/favicon-180.png"><meta name="theme-color" content="#faf7ee">
+<link rel="icon" href="{rel}media/site/favicon.svg" type="image/svg+xml"><link rel="icon" href="{rel}media/site/favicon-32.png" sizes="32x32" type="image/png"><link rel="icon" href="{rel}media/site/favicon-192.png" sizes="192x192" type="image/png"><link rel="apple-touch-icon" href="{rel}media/site/favicon-180.png"><meta name="theme-color" content="#faf7ee">
 <link rel="stylesheet" href="{rel}css/fonts.css?v={STAMP}"><link rel="stylesheet" href="{rel}css/vivance.css?v={STAMP}">
 </head>
 <body>'''
@@ -24,7 +24,7 @@ def nav(current="", rel="", dark=False):
     items = "".join(f'<a class="link" href="{rel}{h}"{" aria-current=page" if h == current else ""}>{E(t)}</a>' for t, h in NAV)
     menu = "".join(f'<a class="item" href="{rel}{h}"{" aria-current=page" if h == current else ""}>{E(t)}<span class="n">{i+1:02d}</span></a>' for i, (t, h) in enumerate(NAV))
     return f'''<nav class="nav{" on-dark" if dark else ""}" data-nav aria-label="Main">
-  <a class="brand" href="{rel}index.html" aria-label="Vivance Art, Paris"><img class="logo" src="{rel}media/site/logo.png" alt="Vivance Art Gallery"><small>Paris</small></a>
+  <a class="brand" href="{rel}index.html" aria-label="Vivance Art, Paris"><img class="logo" src="{rel}media/site/logo.svg" alt="Vivance Art Gallery" width="601" height="185"><small>Paris</small></a>
   <div class="nav-items">{items}<a class="btn btn-ghost shop" href="{rel}shop.html" data-shop-open{" aria-current=page" if current == "shop.html" else ""}>Shop</a></div>
   <button class="burger" aria-expanded="false" aria-controls="menu">Menu</button>
 </nav>
@@ -36,7 +36,7 @@ def footer(rel=""):
     <div class="col"><p class="title">Gallery</p>{"".join(f'<a class="link" href="{rel}{h}">{E(t)}</a>' for t, h in NAV)}<a class="link" href="{rel}legal.html">Legal</a></div>
     <div class="col"><p class="title">Visit</p><p>{E(B["address"])}</p><a class="link" href="mailto:{B["email"]}">{B["email"]}</a><a class="link" href="{B["instagram"]}" target="_blank" rel="noopener">Instagram</a><a class="link" href="{rel}shop.html">Shop</a></div>
   </div>
-  <div class="big" aria-hidden="true"><img src="{rel}media/site/logo.png" alt="Vivance Art Gallery" loading="lazy"></div>
+  <div class="big" aria-hidden="true"><img src="{rel}media/site/logo.svg" alt="Vivance Art Gallery" width="601" height="185" loading="lazy"></div>
   <div class="legal"><span>© {datetime.date.today().year} Vivance Art · Paris</span><span>Discover Latin American Art</span><a class="link" href="#top">Back to top</a></div>
 </div></footer>'''
 def shop_panel(rel=""):
@@ -64,6 +64,9 @@ def product_card(w, rel=""):
   <a class="frame" href="{rel}works/{w["slug"]}.html"><img src="{rel}{img}" alt="{E(w["title"])}" loading="lazy">{'<span class="pill sold">Sold</span>' if w["sold"] else ""}</a>
   <p class="a">{E(a.get("name",""))}</p><p class="t"><i>{E(w["title"])}</i>{", " + E(year) if year else ""}</p><p class="p{" sold" if w["sold"] else ""}">{"Sold" if w["sold"] else price(w)}</p>
   <div class="buy">{buy}</div></article>'''
+def signature(a):
+    ws = [w for w in WORKS if w["artist"] == a["slug"]]; ws = sorted(ws, key=lambda w: (w["sold"], -(w.get("price") or 0)))
+    return ws[0] if ws else None
 def work_card(w, rel="", show_artist=True):
     a = ART.get(w["artist"], {}); img = w["images"][0] if w["images"] else ""
     year = next((v for k, v in w["details"] if k == "Year"), ""); tech = next((v for k, v in w["details"] if k == "Technique"), "")
@@ -134,16 +137,37 @@ def artists():
 {footer()}
 {scripts()}'''
 def artist(a):
-    rel = "../"; ws = [w for w in WORKS if w["artist"] == a["slug"]]
-    bio = "".join(f"<p>{E(p)}</p>" for p in a["bio"])
+    rel = "../"; ws = [w for w in WORKS if w["artist"] == a["slug"]]; sig = signature(a)
+    idx = [x["slug"] for x in D["artists"]].index(a["slug"]); prev = D["artists"][idx - 1]; nxt = D["artists"][(idx + 1) % len(D["artists"])]
+    bio = a["bio"]; lead = bio[0] if bio else ""; rest = "".join(f"<p>{E(p)}</p>" for p in bio[1:])
     links = (f'<a class="btn btn-ghost" href="{a["website"]}" target="_blank" rel="noopener">Website ↗</a>' if a["website"] else "") + (f'<a class="btn btn-ghost" href="{a["instagram"]}" target="_blank" rel="noopener">Instagram ↗</a>' if a["instagram"] else "")
-    return f'''{head(f'{a["name"]} · Vivance Art', (a["bio"][0] if a["bio"] else a["name"])[:160], rel, a["portrait"])}
+    avail = [w for w in ws if not w["sold"]]; sold = [w for w in ws if w["sold"]]
+    seen = {}; 
+    for w in ws:
+        for k, v in w["details"]:
+            if k == "Technique":
+                key = v.lower().replace("3d ", "").replace("plexiglas ", "plexiglass ").replace("plexiglas", "plexiglass").strip()
+                if key not in seen: seen[key] = v[0].upper() + v[1:]
+    disciplines = list(seen.values())[:3]
+    sig_html = (f'''<a class="signature" href="{rel}works/{sig["slug"]}.html" data-reveal="0.1"><img src="{rel}{sig["images"][0]}" alt="{E(sig["title"])}"><figcaption><span><i>{E(sig["title"])}</i>{", " + next((v for k, v in sig["details"] if k == "Year"), "") if next((v for k, v in sig["details"] if k == "Year"), "") else ""}</span><span>{"Sold" if sig["sold"] else price(sig)} →</span></figcaption></a>''' if sig and sig["images"] else "")
+    return f'''{head(f'{a["name"]} · Vivance Art', (lead or a["name"])[:160], rel, sig["images"][0] if sig and sig["images"] else a["portrait"])}
 {nav("artists.html", rel)}
 <main id="top">
-<section class="container artist-head"><div class="name"><p class="caption" data-reveal><a class="link" href="{rel}artists.html">Artists</a> · {len(ws)} works</p><h1 class="display-1" data-reveal="0.08">{E(a["name"])}</h1></div>
-  <div class="facts" data-reveal="0.16"><span>Born {E(a["born"])}</span>{f"<span>Lives and works in {E(a['lives'])}</span>" if a["lives"] else ""}</div></section>
-<section class="section"><div class="container artist-body"><div class="portrait" data-reveal><img src="{rel}{a["portrait"]}" alt="{E(a["name"])}"></div><div class="bio" data-reveal="0.1">{bio}<div class="links">{links}<a class="btn btn-ink" href="mailto:{B["email"]}?subject={E(a["name"])}">Inquire about the artist</a></div></div></div></section>
-{"<section class='section' style='padding-top:0'><div class='container'><div class='sec-head'><h2 class='h2'>Works</h2><a class='link body-s' href='" + rel + "works.html'>All works</a></div><div class='works'>" + "".join(work_card(w, rel, False) for w in ws) + "</div></div></section>" if ws else ""}
+<section class="artist-hero"><div class="container">
+  <p class="caption" data-reveal><a class="link" href="{rel}artists.html">Artists</a> · {idx+1:02d} / {len(D["artists"]):02d}</p>
+  <h1 class="display-1" data-reveal="0.05">{E(a["name"])}</h1>
+  <div class="artist-facts" data-reveal="0.1"><div><span class="caption">Born</span><p>{E(a["born"])}</p></div>{f'<div><span class="caption">Lives and works</span><p>{E(a["lives"])}</p></div>' if a["lives"] else ""}<div><span class="caption">Practice</span><p>{E(", ".join(disciplines)) if disciplines else "Contemporary art"}</p></div><div><span class="caption">With Vivance</span><p>{len(ws)} work{"s" if len(ws) != 1 else ""}{f", {len(avail)} available" if ws else ""}</p></div></div>
+  {sig_html}
+</div></section>
+<section class="section"><div class="container artist-body">
+  <figure class="portrait" data-reveal><img src="{rel}{a["portrait"]}" alt="{E(a["name"])}"><figcaption class="caption">{E(a["name"])}, {E(a["born"].split(",")[-1].strip()) if a["born"] else ""}</figcaption></figure>
+  <div class="bio" data-reveal="0.1"><p class="lead serif">{E(lead)}</p>{rest}<div class="links">{links}<a class="btn btn-ink" href="mailto:{B["email"]}?subject={E(a["name"])}">Inquire about {E(a["name"].split()[0])}</a></div></div>
+</div></section>
+{"<section class='section' style='padding-top:0'><div class='container'><div class='sec-head'><h2 class='h2'>Works</h2><span class='body-s muted'>" + (f"{len(avail)} available · {len(sold)} sold" if sold else f"{len(avail)} available") + "</span></div><div class='works'>" + "".join(work_card(w, rel, False) for w in ws) + "</div></div></section>" if ws else ""}
+<section class="section-s" style="border-top:1px solid var(--ink)"><div class="container artist-nav">
+  <a class="prevnext" href="{rel}artists/{prev["slug"]}.html"><span class="caption">Previous artist</span><span class="h2 serif">{E(prev["name"])}</span></a>
+  <a class="prevnext right" href="{rel}artists/{nxt["slug"]}.html"><span class="caption">Next artist</span><span class="h2 serif">{E(nxt["name"])}</span></a>
+</div></section>
 </main>
 {footer(rel)}
 {scripts(rel)}'''
@@ -215,24 +239,64 @@ def exhibitions():
 {footer()}
 {scripts()}'''
 def about():
+    countries = sorted({a["born"].split(",")[-1].strip() for a in D["artists"] if a["born"]})
+    strip = "".join(f'<a class="mini" href="artists/{a["slug"]}.html"><img src="{a["portrait"]}" alt="{E(a["name"])}" loading="lazy"><span>{E(a["name"])}</span></a>' for a in D["artists"])
+    pillars = [("01", "Exhibitions", "A programme of exhibitions, vernissages and finissages in Paris that gives Latin American artists a stage in Europe, from the first season in 2025 to the Latin America and Caribbean Weeks."),
+               ("02", "Advisory", "Personal, expert advice to collectors, institutions and art enthusiasts, and help with the acquisition of unique, significant works that resonate with their values."),
+               ("03", "Representation", "Emerging and established artists from Colombia, Venezuela and Argentina, championed on international stages and connected with new audiences.")]
+    pil = "".join(f'<div class="pillar" data-reveal="{i*0.06:.2f}"><span class="caption">{n}</span><h3 class="h2 serif">{E(t)}</h3><p>{E(d)}</p></div>' for i, (n, t, d) in enumerate(pillars))
+    facts = [(str(len(D["artists"])), "artists"), (str(len(countries)), "countries of origin"), (str(len(WORKS)), "works in the catalogue"), (str(len(D["events"])), "evenings in 2025")]
+    fx = "".join(f'<div data-reveal="{i*0.05:.2f}"><span class="num serif">{v}</span><span class="caption">{E(l)}</span></div>' for i, (v, l) in enumerate(facts))
     return f'''{head("About · Vivance Art", D["about"]["lead"])}
 {nav("about.html")}
 <main id="top">
-<section class="page-hero"><div class="container stack"><p class="caption" data-reveal>The gallery</p><h1 class="display-2" data-reveal="0.08">{E(D["about"]["lead"])}</h1></div></section>
-<section class="section" style="padding-top:0"><div class="container feature"><div class="img" data-reveal><img src="{D["about"]["image"]}" alt="Vivance Art, Paris" loading="lazy"></div><div class="txt stack" data-reveal="0.1">{"".join(f"<p>{E(p)}</p>" for p in D["about"]["body"])}<p class="muted body-s">{E(B["address"])}</p><a class="btn btn-ink" href="contact.html">Write to us</a></div></div></section>
+<section class="page-hero"><div class="container stack"><p class="caption" data-reveal>The gallery · Paris 12e</p><h1 class="display-2" data-reveal="0.08">{E(D["about"]["lead"])}</h1></div></section>
+<section class="section" style="padding-top:0"><div class="container">
+  <figure class="wide-figure" data-reveal><img src="{D["about"]["image"]}" alt="Vivance Art" loading="lazy"><figcaption class="caption">Vivance Art, 10 avenue de Corbera, Paris</figcaption></figure>
+</div></section>
+<section class="section" style="padding-top:0"><div class="container grid">
+  <div class="span-5" data-reveal><p class="caption">Mission</p><p class="lead serif" style="margin-top:var(--s-4)">{E(D["about"]["body"][0].split(". ")[0])}.</p></div>
+  <div class="span-6 start-7 stack" data-reveal="0.1">{"".join(f"<p>{E(p)}</p>" for p in D["about"]["body"])}</div>
+</div></section>
+<section class="section" style="background:var(--paper-2)"><div class="container">
+  <div class="sec-head"><h2 class="h2">What we do</h2></div>
+  <div class="pillars">{pil}</div>
+</div></section>
+<section class="section"><div class="container">
+  <div class="facts">{fx}</div>
+</div></section>
+<section class="section" style="padding-top:0"><div class="container">
+  <div class="sec-head"><h2 class="h2">The artists</h2><a class="link body-s" href="artists.html">All artists</a></div>
+  <div class="mini-strip">{strip}</div>
+</div></section>
+<section class="section-s" style="border-top:1px solid var(--ink)"><div class="container row between">
+  <div><p class="caption">Visit</p><p class="h2 serif">{E(B["address"])}</p><p class="muted body-s">By appointment and during exhibitions · Metro Reuilly-Diderot</p></div>
+  <div class="row"><a class="btn btn-ink" href="contact.html">Write to us</a><a class="btn" href="exhibitions.html">Exhibitions</a></div>
+</div></section>
 </main>
 {footer()}
 {scripts()}'''
 def framing():
-    def card(i, c):
-        img = f'<img src="{c["img"]}" alt="{E(c["t"])}" loading="lazy">' if c["img"] else ""
-        return f'<div class="card" data-reveal="{i*0.05:.2f}">{img}<h3 class="h3">{E(c["t"])}</h3><p>{E(c["d"])}</p></div>'
-    cards = "".join(card(i, c) for i, c in enumerate(D["framing"]))
-    return f'''{head("Framing and mounting · Vivance Art", "Framing and mounting options for the works acquired at Vivance Art.")}
+    fr = D["framing"]; specs = {"Wood frame": ("Light natural wood", "Paper, canvas, photography", "Warm and soft, lets the work breathe"), "UV-protective acrylic frame": ("Acrylic glazing with UV filter", "Photography, works on paper, prints", "Museum-grade protection against light"),
+             "Full-bleed mounting": ("No mat, image to the edge", "Photography, bold graphic works", "Clean, contemporary, maximum image"), "Mat mounting": ("5 cm white mat, bevel cut", "Drawings, small formats, prints", "Classic depth and breathing room"), "Float mounting": ("Print raised on a hidden support", "Deckled edges, handmade paper, textiles", "Shows the edges, adds shadow and relief")}
+    rows = "".join(f'''<article class="fr-row{" flip" if i % 2 else ""}" id="framing-{i+1}" data-reveal>
+      <div class="img">{f'<img src="{c["img"]}" alt="{E(c["t"])}" loading="lazy">' if c["img"] else ""}</div>
+      <div class="txt"><span class="caption">{i+1:02d} / {len(fr):02d}</span><h2 class="h1 serif">{E(c["t"])}</h2><p>{E(c["d"])}</p>
+        <dl><dt>Material</dt><dd>{E(specs.get(c["t"], ("", "", ""))[0])}</dd><dt>Best for</dt><dd>{E(specs.get(c["t"], ("", "", ""))[1])}</dd><dt>Effect</dt><dd>{E(specs.get(c["t"], ("", "", ""))[2])}</dd></dl></div>
+    </article>''' for i, c in enumerate(fr))
+    toc = "".join(f'<a class="link" href="#framing-{i+1}">{i+1:02d} {E(c["t"])}</a>' for i, c in enumerate(fr))
+    steps = [("Choose the work", "In the shop or with us at the gallery. Every print and work on paper can be framed and mounted to measure."), ("We propose", "Two or three frame and mounting options adapted to the work, the room and your budget, with a quote."), ("Made locally", "Frames come from a family-run, local and sustainable workshop known for the durability of its work."), ("Delivered", "Unique pieces are delivered personally, framed and ready to hang.")]
+    st = "".join(f'<div class="step" data-reveal="{i*0.06:.2f}"><span class="num serif">{i+1}</span><h3 class="h3">{E(t)}</h3><p>{E(d)}</p></div>' for i, (t, d) in enumerate(steps))
+    return f'''{head("Framing and mounting · Vivance Art", "Framing and mounting options for the works acquired at Vivance Art: wood, UV acrylic, full-bleed, mat and float mounting.")}
 {nav("framing.html")}
 <main id="top">
-<section class="page-hero"><div class="container stack"><p class="caption" data-reveal>Framing and mounting</p><h1 class="display-2" data-reveal="0.08">Every print can be framed and mounted to measure.</h1><p class="muted measure-l" data-reveal="0.16">Frames come from a family-run, local and sustainable workshop known for the durability of its work. Ask for a quote when you acquire a piece.</p></div></section>
-<section class="section" style="padding-top:0"><div class="container cards">{cards}</div></section>
+<section class="page-hero"><div class="container stack"><p class="caption" data-reveal>Framing and mounting</p><h1 class="display-2" data-reveal="0.08">Every work can be framed and mounted to measure, by a local workshop.</h1><p class="muted measure-l" data-reveal="0.16">Five ways to frame a print or a work on paper. Ask for a quote when you acquire a piece, or write to us for a work you already own.</p><div class="toc" data-reveal="0.2">{toc}</div></div></section>
+<section class="section" style="padding-top:0"><div class="container fr-rows">{rows}</div></section>
+<section class="section" style="background:var(--paper-2)"><div class="container">
+  <div class="sec-head"><h2 class="h2">How it works</h2></div>
+  <div class="steps">{st}</div>
+</div></section>
+<section class="section-s" style="border-top:1px solid var(--ink)"><div class="container row between"><span class="h3 serif">Ask for a framing quote for a work you own or one from the shop.</span><a class="btn btn-accent" href="mailto:{B["email"]}?subject=Framing%20and%20mounting">Ask for a quote</a></div></section>
 </main>
 {footer()}
 {scripts()}'''
