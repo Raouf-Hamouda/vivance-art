@@ -156,7 +156,7 @@ h1, h2, h3, h4, p, figure, ul, ol, dl, dd { margin: 0; } ul, ol { padding: 0; li
 .footer .cols { display: grid; grid-template-columns: repeat(var(--cols), minmax(0, 1fr)); column-gap: var(--gutter); row-gap: var(--s-6); }
 .footer .col { grid-column: span 3; font-size: var(--body-s); } .footer .col.wide { grid-column: span 6; } .footer .col .title { font-size: var(--caption); letter-spacing: var(--track-caps); text-transform: uppercase; color: var(--muted); margin-bottom: var(--s-3); } .footer .col a { display: block; padding: .2em 0; }
 @media (max-width: 1023.98px) { .footer .col, .footer .col.wide { grid-column: span 4; } } @media (max-width: 639.98px) { .footer .col, .footer .col.wide { grid-column: span 4; } }
-.footer .big { font-family: var(--font-display); font-size: clamp(3rem, 12vw, 11rem); line-height: .95; letter-spacing: .01em; margin-top: var(--s-8); color: var(--ink); }
+.footer .big { margin-top: var(--s-8); } .footer .big img { width: min(100%, 52rem); height: auto; }
 .footer .legal { display: flex; justify-content: space-between; gap: var(--s-4); flex-wrap: wrap; padding-top: var(--s-5); border-top: 1px solid var(--line); margin-top: var(--s-6); font-size: var(--caption); color: var(--muted); }
 /* page hero (inner pages) */
 .page-hero { padding-top: calc(var(--nav-h) + var(--s-9)); padding-bottom: var(--s-7); }
@@ -193,7 +193,7 @@ h1, h2, h3, h4, p, figure, ul, ol, dl, dd { margin: 0; } ul, ol { padding: 0; li
   .work-page .details { position: static; } .details .price { font-size: var(--h1); }
   .page-hero { padding-top: calc(var(--nav-h) + var(--s-7)); } .display-2 { font-size: clamp(1.9rem, 8.5vw, 2.6rem); }
   .artist-head { padding-top: calc(var(--nav-h) + var(--s-6)); } .artist-head .display-1 { font-size: clamp(2.4rem, 11vw, 3.2rem); }
-  .footer .big { font-size: clamp(3rem, 18vw, 5rem); }
+  .footer .big img { width: 100%; }
 }
 
 /* shop panel: the shop as a layer over any page */

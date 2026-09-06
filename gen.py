@@ -25,18 +25,18 @@ def nav(current="", rel="", dark=False):
     menu = "".join(f'<a class="item" href="{rel}{h}"{" aria-current=page" if h == current else ""}>{E(t)}<span class="n">{i+1:02d}</span></a>' for i, (t, h) in enumerate(NAV))
     return f'''<nav class="nav{" on-dark" if dark else ""}" data-nav aria-label="Main">
   <a class="brand" href="{rel}index.html" aria-label="Vivance Art, Paris"><img class="logo" src="{rel}media/site/logo.png" alt="Vivance Art Gallery"><small>Paris</small></a>
-  <div class="nav-items">{items}<a class="btn btn-ghost shop" href="{rel}shop.html" data-shop-open{" aria-current=page" if current == "shop.html" else ""}>Shop</a><a class="link cart" href="{CART}" target="_blank" rel="noopener">Cart ↗</a></div>
+  <div class="nav-items">{items}<a class="btn btn-ghost shop" href="{rel}shop.html" data-shop-open{" aria-current=page" if current == "shop.html" else ""}>Shop</a></div>
   <button class="burger" aria-expanded="false" aria-controls="menu">Menu</button>
 </nav>
-<div class="menu" id="menu">{menu}<a class="item" href="{rel}shop.html" data-shop-open{" aria-current=page" if current == "shop.html" else ""}>Shop<span class="n">07</span></a><div class="foot"><a href="{CART}" target="_blank" rel="noopener">Cart ↗</a><a href="mailto:{B["email"]}">{B["email"]}</a><a href="{B["instagram"]}" target="_blank" rel="noopener">Instagram</a><span>{E(B["address"])}</span></div></div>'''
+<div class="menu" id="menu">{menu}<a class="item" href="{rel}shop.html" data-shop-open{" aria-current=page" if current == "shop.html" else ""}>Shop<span class="n">07</span></a><div class="foot"><a href="mailto:{B["email"]}">{B["email"]}</a><a href="{B["instagram"]}" target="_blank" rel="noopener">Instagram</a><span>{E(B["address"])}</span></div></div>'''
 def footer(rel=""):
     return f'''<footer class="footer"><div class="container">
   <div class="cols">
-    <div class="col wide"><p class="title">Vivance Art</p><p class="body-l measure-l">{E(D["about"]["lead"])}</p></div>
+    <div class="col wide"><p class="title">The gallery</p><p class="body-l measure-l">{E(D["about"]["lead"])}</p></div>
     <div class="col"><p class="title">Gallery</p>{"".join(f'<a class="link" href="{rel}{h}">{E(t)}</a>' for t, h in NAV)}<a class="link" href="{rel}legal.html">Legal</a></div>
     <div class="col"><p class="title">Visit</p><p>{E(B["address"])}</p><a class="link" href="mailto:{B["email"]}">{B["email"]}</a><a class="link" href="{B["instagram"]}" target="_blank" rel="noopener">Instagram</a><a class="link" href="{rel}shop.html">Shop</a></div>
   </div>
-  <div class="big" aria-hidden="true">Vivance</div>
+  <div class="big" aria-hidden="true"><img src="{rel}media/site/logo.png" alt="Vivance Art Gallery" loading="lazy"></div>
   <div class="legal"><span>© {datetime.date.today().year} Vivance Art · Paris</span><span>Discover Latin American Art</span><a class="link" href="#top">Back to top</a></div>
 </div></footer>'''
 def shop_panel(rel=""):
@@ -45,7 +45,7 @@ def shop_panel(rel=""):
     data = json.dumps({"items": items, "artists": arts, "cart": CART}, ensure_ascii=False).replace("</", "<\\/")
     return f'''<div class="shop-panel" id="shop" role="dialog" aria-modal="true" aria-label="Shop" hidden>
   <div class="shop-head"><div><p class="caption">Shop · <span data-shop-count></span> works available</p><p class="h2 serif">Original works, secure checkout.</p></div>
-    <div class="row"><a class="btn btn-ink" href="{CART}" target="_blank" rel="noopener">View cart ↗</a><button class="btn btn-ghost" data-shop-close>Close</button></div></div>
+    <div class="row"><button class="btn btn-ghost" data-shop-close>Close</button></div></div>
   <div class="shop-filters filters" data-shop-filters></div>
   <div class="shop-grid" data-shop-grid></div>
   <p class="note caption" style="text-transform:none;letter-spacing:0;padding:var(--s-6) 0 0">Buy now goes straight to our secure checkout with the work. Unique pieces are delivered personally. <a class="ul" href="{rel}framing.html">Framing and mounting</a> on request.</p>
@@ -193,7 +193,7 @@ def shop():
 <main id="top">
 <section class="page-hero"><div class="container stack"><p class="caption" data-reveal>Shop · {len(avail)} works available</p><h1 class="display-2" data-reveal="0.08">Original works, acquired in a few clicks.</h1><p class="muted measure-l" data-reveal="0.12">Buy now takes you straight to our secure checkout with the work. Unique pieces are delivered personally; framing and mounting on request. Questions before buying: <a class="ul" href="contact.html">write to us</a>.</p></div></section>
 <section class="section" style="padding-top:0"><div class="container">
-  <div class="shop-bar"><div class="filters">{tabs}</div><a class="btn btn-ink" href="{CART}" target="_blank" rel="noopener">View cart ↗</a></div>
+  <div class="shop-bar"><div class="filters">{tabs}</div></div>
   <div class="shop-grid" id="works">{"".join(product_card(w) for w in WORKS)}</div><p class="muted body-s" id="empty" hidden style="padding:var(--s-7) 0">No work matches this selection.</p>
 </div></section>
 </main>
