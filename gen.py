@@ -72,11 +72,12 @@ def work_card(w, rel="", show_artist=True):
   <div class="cap"><div>{f'<p class="artist">{E(a.get("name",""))}</p>' if show_artist else ""}<p class="title"><i>{E(w["title"])}</i>{", " + E(year) if year else ""}</p><p class="meta">{E(tech)}</p></div><span class="price{" sold" if w["sold"] else ""}">{"Sold" if w["sold"] else price(w)}</span></div></a>'''
 def contact_form():
     return f'''<form class="form" data-mailto="{B["email"]}" novalidate>
-  <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" type="text" required autocomplete="name"></div>
-  <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" required autocomplete="email"></div>
-  <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="message" placeholder="A work, an artist, a visit, a project"></textarea></div>
+  <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" type="text" required autocomplete="name" placeholder="Your name"></div>
+  <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" required autocomplete="email" placeholder="you@example.com"></div>
+  <div class="field full"><label for="f-subject">Subject</label><select id="f-subject" name="subject"><option>Acquire a work</option><option>Visit the gallery</option><option>An artist</option><option>Framing and mounting</option><option>Press</option><option>Something else</option></select></div>
+  <div class="field full"><label for="f-msg">Message</label><textarea id="f-msg" name="message" placeholder="Tell us about the work, the artist or the project you have in mind."></textarea></div>
   <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-  <div class="row between"><span class="caption">Opens your email app</span><button class="btn btn-ink" type="submit">Send</button></div>
+  <div class="full row between"><span class="caption">Opens your email app, we answer within two days</span><button class="btn btn-ink" type="submit">Send the message</button></div>
 </form>'''
 # ---------------------------------------------------------------- HOME
 def home():
@@ -116,7 +117,7 @@ def home():
 </div></section>
 <section class="section-s" style="border-top:1px solid var(--ink)"><div class="container grid">
   <div class="span-5 stack" data-reveal><p class="caption">Newsletter</p><h2 class="h1">Be the first to hear about new projects, exhibitions and works.</h2></div>
-  <div class="span-6 start-7" data-reveal="0.1"><form class="form" data-mailto="{B["email"]}" data-subject="Newsletter" novalidate><div class="field"><label for="n-email">Email</label><input id="n-email" name="email" type="email" required></div><div class="row between"><span class="caption">Opens your email app</span><button class="btn btn-ink" type="submit">Subscribe</button></div></form></div>
+  <div class="span-6 start-7" data-reveal="0.1"><form class="form" data-mailto="{B["email"]}" data-subject="Newsletter" novalidate style="grid-template-columns:1fr"><div class="field"><label for="n-email">Email</label><input id="n-email" name="email" type="email" required placeholder="you@example.com"></div><div class="row between"><span class="caption">Opens your email app</span><button class="btn btn-ink" type="submit">Subscribe</button></div></form></div>
 </div></section>
 </main>
 {footer()}
@@ -239,9 +240,11 @@ def contact():
     return f'''{head("Contact · Vivance Art", "Contact Vivance Art, 10 avenue de Corbera, Paris 12e.")}
 {nav("contact.html")}
 <main id="top">
-<section class="page-hero"><div class="container stack"><p class="caption" data-reveal>Contact</p><h1 class="display-2" data-reveal="0.08">Questions about a work, an artist, a visit or an event: write to us.</h1></div></section>
+<section class="page-hero"><div class="container stack"><p class="caption" data-reveal>Contact</p><h1 class="display-2" data-reveal="0.08">A work, an artist, a visit or a project: write to us.</h1></div></section>
 <section class="section" style="padding-top:0"><div class="container grid">
-  <div class="span-5 stack" data-reveal><p class="caption">Gallery</p><p class="h2 serif">{E(B["address"])}</p><p><a class="ul" href="mailto:{B["email"]}">{B["email"]}</a></p><p><a class="ul" href="{B["instagram"]}" target="_blank" rel="noopener">@vivancearts on Instagram</a></p><p><a class="ul" href="https://maps.google.com/?q={E(B["address"])}" target="_blank" rel="noopener">Open in Maps</a></p><p class="muted body-s">Visits by appointment and during exhibitions.</p></div>
+  <div class="span-5" data-reveal><div class="contact-card"><p class="caption">The gallery</p><p class="h2 serif">Vivance Art<br>{E(B["address"])}</p>
+    <div class="rows"><div><span>Email</span><a class="ul" href="mailto:{B["email"]}">{B["email"]}</a></div><div><span>Instagram</span><a class="ul" href="{B["instagram"]}" target="_blank" rel="noopener">@vivancearts</a></div><div><span>Visits</span><span>By appointment and during exhibitions</span></div><div><span>Metro</span><span>Reuilly-Diderot, lines 1 and 8</span></div><div><span>Map</span><a class="ul" href="https://maps.google.com/?q={E(B["address"])}" target="_blank" rel="noopener">Open in Maps</a></div></div>
+    <a class="btn btn-accent" href="shop.html" data-shop-open>Browse the works</a></div></div>
   <div class="span-6 start-7" data-reveal="0.1">{contact_form()}</div>
 </div></section>
 </main>

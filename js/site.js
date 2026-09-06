@@ -23,7 +23,7 @@
     const q = new URLSearchParams(location.search).get('artist'); if (q) { const b = filters.querySelector(`.tab[data-v="${q}"]`); if (b) b.click(); } }
   /* forms -> email app */
   document.querySelectorAll('form[data-mailto]').forEach(f => f.addEventListener('submit', e => { e.preventDefault(); const d = new FormData(f); if (d.get('website')) return;
-    const subject = f.dataset.subject || 'Contact via vivanceart'; const body = [d.get('name') ? 'Name: ' + d.get('name') : '', 'Email: ' + d.get('email'), '', d.get('message') || ''].filter(x => x !== '').join('\n');
+    const subject = f.dataset.subject || (d.get('subject') ? d.get('subject') + ' · via vivanceart' : 'Contact via vivanceart'); const body = [d.get('name') ? 'Name: ' + d.get('name') : '', 'Email: ' + d.get('email'), '', d.get('message') || ''].filter(x => x !== '').join('\n');
     location.href = `mailto:${f.dataset.mailto}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`; }));
   /* shop panel */
   const panel = document.getElementById('shop'), dataEl = document.getElementById('shop-data');

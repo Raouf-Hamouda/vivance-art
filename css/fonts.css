@@ -1,5 +1,5 @@
-/* Marcellus (OFL, the gallery's display face) + Inter (OFL) */
-@font-face{font-family:"Marcellus";src:url("../fonts/marcellus-400.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+/* Forum (OFL, inscriptional roman close to Marcellus) for titles + Inter (OFL) */
+@font-face{font-family:"Forum";src:url("../fonts/forum-400.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
 @font-face{font-family:"Inter";src:url("../fonts/inter-1ZFS7N918ojhhd0nQWdj3jz4w.woff2") format("woff2");font-weight:600;font-style:normal;font-display:swap}
 @font-face{font-family:"Inter";src:url("../fonts/inter-GrgcKwrN6d3Uz8EwcLHZxwEfC4.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
 @font-face{font-family:"Inter";src:url("../fonts/inter-UjlFhCnUjxhNfep4oYBPqnEssyo.woff2") format("woff2");font-weight:500;font-style:normal;font-display:swap}
